@@ -2,7 +2,9 @@ name: daily scrape
 
 on:
   schedule:
+    - cron: "0 21 * * *"   # 毎日 06:00 JST（=21:00 UTC 前日）
     - cron: "10 0 * * *"   # 毎日 09:10 JST（=00:10 UTC）
+    - cron: "0 11 * * *"   # 毎日 20:00 JST（=11:00 UTC）
   workflow_dispatch:
 
 permissions:
