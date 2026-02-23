@@ -1,23 +1,18 @@
 """
-統合版（荒川屋 / ひらの丸）
-目的：
-- 予約/空席情報を 1 Excelシート(log) に蓄積（重複は record_id で排除）
-- HTML/ページ保存はしない（重いのでやめる）
-- boat と title は service に統一（同一列）
-- 予約日付は reservation_date（YYYY-MM-DD）に統一（年跨ぎに注意）
-- “上線人数（=people_count）” を最優先で取りに行く（OpenCVがある場合）
+arawkawa_hirano_data.py（対処版：UA強化 + リトライ）
 
-要件：
+出力:
+- data/reservation_log.xlsx（sheet: log）
+
+ポイント:
+- GitHub Actions など “サーバーからのアクセス” を弾くサイトがある
+  → まず User-Agent/Accept/Lang をブラウザ相当にする（403対策の第一手）
+- 一時的な通信失敗がある
+  → Retry（自動リトライ）を導入
+
+依存:
 - pandas, requests, beautifulsoup4, pillow, openpyxl
-- numpy（OpenCVがある場合に必要）
-- opencv-python（任意：座席図から人数推定をしたい場合）
-
-配置（推奨）：
-repo_root/
-  arawkawa_hirano_data.py
-  data/                      # 自動生成（無ければ作る）
-  assets/
-    seat_template.png         # 任意（無ければOK）
+- （任意）numpy, opencv-python  : 座席図から人数推定したい場合
 """
 
 from __future__ import annotations
@@ -27,7 +22,6 @@ import io
 import os
 import re
 import time
-from calendar import monthrange
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta, timezone
 from typing import Dict, List, Optional, Tuple
@@ -38,7 +32,16 @@ import requests
 from bs4 import BeautifulSoup
 from PIL import Image, ImageOps
 
-# ===== OpenCV（人数カウント）=====
+# ---- requests retry ----
+from requests.adapters import HTTPAdapter
+try:
+    # urllib3 v2
+    from urllib3.util.retry import Retry
+except Exception:
+    # older
+    from urllib3 import Retry  # type: ignore
+
+# ===== OpenCV（人数カウント：任意）=====
 try:
     import cv2  # type: ignore
     import numpy as np  # type: ignore
@@ -59,25 +62,59 @@ OUT_XLSX = os.path.join(DATA_DIR, "reservation_log.xlsx")
 SHEET_ALL = "log"
 
 ASSETS_DIR = os.path.join(REPO_ROOT, "assets")
-TEMPLATE_PATH = os.path.join(ASSETS_DIR, "seat_template.png")  # 任意
+TEMPLATE_PATH = os.path.join(ASSETS_DIR, "seat_template.png")  # 任意（無くてもOK）
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; reservation-scraper/merged; +https://example.com)"
-}
 TIMEOUT = 25
-
 SLEEP_BETWEEN_REQUEST_SEC = 0.6
 
 
 # =====================
-# URL（対象サイト）
+# ★ 403対策：ブラウザっぽいヘッダ
 # =====================
-ARAKAWA_URL = "https://www.arakawaya.jp/"  # 荒川屋トップ（必要に応じて調整）
-HIRANO_BASE_URL = "https://hiranomaru.net/"  # ひらの丸トップ（必要に応じて調整）
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/121.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "ja,en-US;q=0.9,en;q=0.8",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1",
+}
 
-# ひらの丸の “もっと見る” 的なAPI（元コードの意図を踏襲）
-HIRANO_MORE_API_PATH = "/news/ajax/"  # 例：サイト側の実装により異なる可能性あり
+
+# =====================
+# URL（対象サイト）
+# ※ 必要に応じてあなたのサイト実URLに合わせる
+# =====================
+ARAKAWA_URL = "https://www.arakawaya.jp/"
+HIRANO_BASE_URL = "https://hiranomaru.net/"
+
+# “もっと見る” がある場合の保険（サイトが違えば効かないので失敗してOK）
+HIRANO_MORE_API_PATH = "/news/ajax/"
 HIRANO_MAX_PAGES = 30
+
+
+# =====================
+# session（リトライ設定）
+# =====================
+def make_session() -> requests.Session:
+    s = requests.Session()
+    retry = Retry(
+        total=4,
+        connect=4,
+        read=4,
+        status=4,
+        backoff_factor=0.8,
+        status_forcelist=(429, 500, 502, 503, 504),
+        allowed_methods=("GET", "HEAD"),
+        raise_on_status=False,
+    )
+    adapter = HTTPAdapter(max_retries=retry, pool_connections=10, pool_maxsize=10)
+    s.mount("http://", adapter)
+    s.mount("https://", adapter)
+    return s
 
 
 # =====================
@@ -110,11 +147,6 @@ def sha1_text(s: str) -> str:
 
 
 def url_normalize(u: str) -> str:
-    """
-    URLの同一性判定を安定化：
-    - 末尾スラッシュの揺れ吸収
-    - クエリ順序の正規化
-    """
     if not u:
         return ""
     sp = urlsplit(u)
@@ -122,7 +154,6 @@ def url_normalize(u: str) -> str:
     q_sorted = sorted([(k, v) for k, v in q])
     query = urlencode(q_sorted)
     path = sp.path or "/"
-    # 末尾スラッシュの揺れ
     if path != "/" and path.endswith("/"):
         path = path[:-1]
     return urlunsplit((sp.scheme, sp.netloc, path, query, ""))
@@ -139,28 +170,32 @@ def abs_url(base: str, href: str) -> str:
     if href.startswith("/"):
         sp = urlsplit(base)
         return f"{sp.scheme}://{sp.netloc}{href}"
-    # relative
     if base.endswith("/"):
         return base + href
     return base + "/" + href
 
 
-def fetch_text(url: str, params: Optional[dict] = None, timeout: int = TIMEOUT) -> str:
-    r = requests.get(url, params=params, headers=HEADERS, timeout=timeout)
-    r.raise_for_status()
+def fetch_text(session: requests.Session, url: str, params: Optional[dict] = None, referer: Optional[str] = None) -> str:
+    headers = dict(HEADERS)
+    if referer:
+        headers["Referer"] = referer
+    r = session.get(url, params=params, headers=headers, timeout=TIMEOUT)
+    # Retryはraise_on_status=Falseなので、ここで明示的にエラーを分かるようにする
+    if r.status_code >= 400:
+        raise requests.HTTPError(f"{r.status_code} {r.reason} for url: {url}", response=r)
     r.encoding = r.apparent_encoding
     return r.text
 
 
-def head_content_length(session: requests.Session, url: str) -> Optional[int]:
-    try:
-        r = session.head(url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True)
-        if r.status_code >= 400:
-            return None
-        cl = r.headers.get("Content-Length")
-        return int(cl) if cl and cl.isdigit() else None
-    except Exception:
-        return None
+def fetch_bytes(session: requests.Session, url: str, referer: Optional[str] = None, max_bytes: int = 1_200_000) -> bytes:
+    headers = dict(HEADERS)
+    if referer:
+        headers["Referer"] = referer
+    r = session.get(url, headers=headers, timeout=TIMEOUT, stream=True)
+    if r.status_code >= 400:
+        raise requests.HTTPError(f"{r.status_code} {r.reason} for url: {url}", response=r)
+    data = r.raw.read(max_bytes)
+    return data
 
 
 def load_log(path: str, sheet: str) -> pd.DataFrame:
@@ -192,12 +227,6 @@ def append_dedup_by_id(old_df: pd.DataFrame, new_df: pd.DataFrame, id_col: str =
 # 日付推定
 # =====================
 def parse_jp_ymd(s: str) -> Optional[date]:
-    """
-    例:
-      2026-02-23
-      2026/2/23
-      2026年2月23日
-    """
     if not s:
         return None
     s2 = normalize_digits(str(s))
@@ -213,18 +242,13 @@ def parse_jp_ymd(s: str) -> Optional[date]:
 
 
 def infer_nearest_date(month: int, day: int, crawl_dt: datetime, base_year: Optional[int] = None) -> date:
-    """
-    “月/日” しか無いときに年を推定（年跨ぎ対応）：
-    - base_year があれば優先
-    - なければ crawl_dt の年を中心に前後年も見て最も近い日付を採用
-    """
-    cand_years = []
+    cand_years: List[int] = []
     if base_year is not None:
         cand_years.append(base_year)
     cand_years.extend([crawl_dt.year - 1, crawl_dt.year, crawl_dt.year + 1])
 
-    best = None
-    best_delta = None
+    best: Optional[date] = None
+    best_delta: Optional[int] = None
     for y in cand_years:
         try:
             d = date(y, month, day)
@@ -238,9 +262,6 @@ def infer_nearest_date(month: int, day: int, crawl_dt: datetime, base_year: Opti
 
 
 def date_flag(res_d: Optional[date], crawl_dt: datetime) -> str:
-    """
-    ざっくり分類（用途：フィルタ/確認）
-    """
     if res_d is None:
         return "CHECK"
     today = crawl_dt.date()
@@ -273,12 +294,9 @@ def extract_fish_and_confidence(service: str, fallback: str = "") -> Tuple[str, 
 
 
 # =====================
-# 画像処理（座席図から人数推定）
+# 画像処理（座席図から人数推定：任意）
 # =====================
 def dhash(img: Image.Image, hash_size: int = 8) -> int:
-    """
-    dHash（差分ハッシュ）
-    """
     im = img.convert("L").resize((hash_size + 1, hash_size), Image.Resampling.LANCZOS)
     pix = list(im.getdata())
     rows = [pix[i * (hash_size + 1) : (i + 1) * (hash_size + 1)] for i in range(hash_size)]
@@ -297,15 +315,9 @@ def hamming(a: int, b: int) -> int:
 
 
 def is_seatlike_by_color(img: Image.Image) -> bool:
-    """
-    座席図（青〜水色のベタ塗りが大きく、黒文字が周囲にある）を優先するための粗い判定。
-    写真（多色）を落とすのが目的。
-    """
     if not OPENCV_OK:
-        # OpenCV無しでも、雑判定だけはPIL+numpy無しでやりたいが、
-        # numpyが無いケースもあるので、ここでは常にTrueにして足切りしない
+        # numpy/cv2無しの時は足切りしない
         return True
-
     im = img.convert("RGB")
     w, h = im.size
     im = im.resize((max(80, w // 8), max(80, h // 8)))
@@ -329,43 +341,28 @@ if os.path.exists(TEMPLATE_PATH):
 
 
 def count_people_from_seat_image(img: Image.Image) -> Tuple[str, str]:
-    """
-    座席図っぽい画像から “人数” を推定（OpenCVがある場合）。
-    返り値：("人数", "note")
-    """
     if not OPENCV_OK:
         return "", "opencv_not_available"
 
     try:
-        # 画像前処理（白黒→二値）
         im = ImageOps.exif_transpose(img).convert("RGB")
-        # 座席図らしさ判定
         if not is_seatlike_by_color(im):
             return "", "not_seatlike"
 
         np_img = np.array(im)
         gray = cv2.cvtColor(np_img, cv2.COLOR_RGB2GRAY)
-
-        # 文字などを消して “塗りつぶし丸（予約済み）” を拾いたいので
-        # ここはサイトに合わせて閾値の調整余地あり
         blur = cv2.GaussianBlur(gray, (5, 5), 0)
         thr = cv2.adaptiveThreshold(
             blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 51, 6
         )
-
-        # ノイズ除去
         kernel = np.ones((3, 3), np.uint8)
         thr = cv2.morphologyEx(thr, cv2.MORPH_OPEN, kernel, iterations=1)
 
-        # 輪郭抽出
         contours, _ = cv2.findContours(thr, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-        # “丸っぽい塊” を数える（面積で足切り）
         areas = [cv2.contourArea(c) for c in contours]
         if not areas:
             return "", "no_contours"
 
-        # 面積分布からざっくり丸候補を推定（極端に小さい/大きいもの除外）
         areas_sorted = sorted(areas)
         med = areas_sorted[len(areas_sorted) // 2]
         min_a = max(10.0, med * 0.15)
@@ -376,7 +373,6 @@ def count_people_from_seat_image(img: Image.Image) -> Tuple[str, str]:
             a = cv2.contourArea(c)
             if a < min_a or a > max_a:
                 continue
-            # 円形度（4πA/P^2）も軽く見る
             peri = cv2.arcLength(c, True)
             if peri <= 0:
                 continue
@@ -385,7 +381,6 @@ def count_people_from_seat_image(img: Image.Image) -> Tuple[str, str]:
                 continue
             cnt += 1
 
-        # 0は意味が薄いので空に寄せる
         if cnt <= 0:
             return "", f"cnt=0 med={med:.1f}"
         return str(cnt), f"cnt={cnt} med={med:.1f}"
@@ -394,11 +389,7 @@ def count_people_from_seat_image(img: Image.Image) -> Tuple[str, str]:
         return "", f"opencv_failed:{repr(e)}"
 
 
-def pick_seat_chart_kamiya(session: requests.Session, candidate_urls: List[str]) -> Tuple[str, str, str]:
-    """
-    “座席図候補URL群” からベスト画像を選ぶ（人数最優先の簡易版）
-    返り値： (best_url, people_count, note)
-    """
+def pick_seat_chart(session: requests.Session, candidate_urls: List[str], referer: str) -> Tuple[str, str, str]:
     MIN_BYTES = 4_000
     MAX_BYTES = 800_000
     STREAM_LIMIT = 1_200_000
@@ -422,21 +413,14 @@ def pick_seat_chart_kamiya(session: requests.Session, candidate_urls: List[str])
     best_score = -10**9
 
     for u in ordered:
-        cl = head_content_length(session, u)
-        if cl is not None and (cl < MIN_BYTES or cl > MAX_BYTES):
-            continue
-
         try:
-            r = session.get(u, headers=HEADERS, timeout=TIMEOUT, stream=True)
-            r.raise_for_status()
-            data = r.raw.read(STREAM_LIMIT)
+            data = fetch_bytes(session, u, referer=referer, max_bytes=STREAM_LIMIT)
             if len(data) < MIN_BYTES or len(data) > MAX_BYTES:
                 continue
 
             img = Image.open(io.BytesIO(data))
             img = ImageOps.exif_transpose(img)
 
-            # テンプレ近似（任意）
             dist = None
             if TEMPLATE_HASH is not None:
                 try:
@@ -444,19 +428,13 @@ def pick_seat_chart_kamiya(session: requests.Session, candidate_urls: List[str])
                 except Exception:
                     dist = None
 
-            # 人数推定
             people, note = count_people_from_seat_image(img)
 
-            # スコア：人数が取れたものを最優先、次にテンプレ距離、次にURL優先度
             score = 0
             if people:
-                score += 10_000 + int(people)  # 人数が大きい方が若干優先（同画像違いの揺れ対策）
-            else:
-                score += 0
-
+                score += 10_000 + int(people)
             if dist is not None:
-                score += max(0, 500 - dist)  # dist小さいほど加点
-
+                score += max(0, 500 - dist)
             score += url_pref(u) * 10
 
             if score > best_score:
@@ -464,9 +442,11 @@ def pick_seat_chart_kamiya(session: requests.Session, candidate_urls: List[str])
                 best_url = u
                 best_people = people
                 dist_s = f"dist={dist}" if dist is not None else "dist=None"
-                best_note = f"{note} {dist_s} cl={cl}"
+                best_note = f"{note} {dist_s} bytes={len(data)}"
 
-        except Exception:
+        except Exception as e:
+            # どのURLで落ちたか分かるようにメモ
+            best_note = f"last_error={repr(e)}"
             continue
 
         time.sleep(0.05)
@@ -487,11 +467,8 @@ class Post:
 
 def extract_posts_from_html_hirano(html: str, source_url: str) -> List[Dict[str, str]]:
     soup = BeautifulSoup(html, "html.parser")
-
     posts: List[Dict[str, str]] = []
 
-    # ざっくり：記事っぽいブロック
-    # （サイト構造が違う場合はここを合わせる）
     for art in soup.select("article, .post, .news, .entry"):
         title = ""
         t = art.select_one("h1, h2, h3, .title")
@@ -512,47 +489,22 @@ def extract_posts_from_html_hirano(html: str, source_url: str) -> List[Dict[str,
 
         if body:
             posts.append(
-                {
-                    "title": title,
-                    "body_text": body,
-                    "detail_url": detail,
-                    "post_date": dt,
-                }
+                {"title": title, "body_text": body, "detail_url": detail, "post_date": dt}
             )
 
-    # 何も取れないとき：ページ全体を1投稿として扱う（保険）
     if not posts:
         text = normalize_space(soup.get_text(" ", strip=True))
         if text:
-            posts.append(
-                {
-                    "title": "",
-                    "body_text": text,
-                    "detail_url": source_url,
-                    "post_date": "",
-                }
-            )
+            posts.append({"title": "", "body_text": text, "detail_url": source_url, "post_date": ""})
+
     return posts
 
 
-# =====================
-# “予約行” 抽出（本文から）
-# =====================
 def extract_reservations_from_post_text(text: str) -> List[Dict[str, str]]:
-    """
-    例に強い正規表現：
-      2/23 〇〇船 12名
-      2/23 〇〇船 満席
-      2/23 〇〇船 受付中
-    ここは運用しながら当てるのが正解。
-    """
     t = normalize_digits(text)
     t = normalize_space(t)
 
     rows: List[Dict[str, str]] = []
-
-    # 1) “月/日” を含む行をまず拾う
-    #    セパレータが色々あるので、句点/改行/スペースでそれっぽく分割
     parts = re.split(r"[。\n\r]| {2,}", t)
     for p in parts:
         p = normalize_space(p)
@@ -563,20 +515,14 @@ def extract_reservations_from_post_text(text: str) -> List[Dict[str, str]]:
             continue
 
         md = f"{int(m.group(1))}/{int(m.group(2))}"
+        after = p[m.end():].strip()
+        boat = after.split(" ")[0].strip() if after else ""
 
-        # 船名（とりあえず月日以降の先頭語を船名扱い）
-        after = p[m.end() :].strip()
-        boat = ""
-        if after:
-            boat = after.split(" ")[0].strip()
-
-        # 人数
         people = ""
         m2 = re.search(r"(\d{1,2})\s*名", p)
         if m2:
             people = m2.group(1)
 
-        # 状態
         status = ""
         for kw in ["満席", "受付中", "空き", "空席", "キャンセル", "中止", "休船", "募集中"]:
             if kw in p:
@@ -584,30 +530,21 @@ def extract_reservations_from_post_text(text: str) -> List[Dict[str, str]]:
                 break
 
         rows.append(
-            {
-                "reservation_md": md,
-                "boat": boat,
-                "people_count": people,
-                "status_text": status or p,
-            }
+            {"reservation_md": md, "boat": boat, "people_count": people, "status_text": status or p}
         )
-
     return rows
 
 
-# =====================
-# ひらの丸：収集
-# =====================
-def collect_hiranomaru(crawl_time: str) -> pd.DataFrame:
+def collect_hiranomaru(session: requests.Session, crawl_time: str) -> pd.DataFrame:
     top_url = HIRANO_BASE_URL
-    html = fetch_text(top_url)
+    html = fetch_text(session, top_url, referer=top_url)
     all_posts = extract_posts_from_html_hirano(html, source_url=top_url)
 
-    # “もっと見る” がある前提で追加取得（失敗してもOK）
+    # 追加取得（失敗してOK）
     for p in range(2, HIRANO_MAX_PAGES + 1):
         api_url = abs_url(HIRANO_BASE_URL, HIRANO_MORE_API_PATH)
         try:
-            frag = fetch_text(api_url, params={"p": p})
+            frag = fetch_text(session, api_url, params={"p": p}, referer=top_url)
         except Exception:
             break
         if frag.strip().startswith("nodata"):
@@ -620,31 +557,6 @@ def collect_hiranomaru(crawl_time: str) -> pd.DataFrame:
         crawl_dt = datetime.now(JST)
 
     rows: List[Dict[str, str]] = []
-
-    if not all_posts:
-        rid = sha1_text("hiranomaru|healthcheck")
-        rows.append(
-            {
-                "record_id": rid,
-                "crawl_time": crawl_time,
-                "site_name": "ひらの丸",
-                "reservation_date": "",
-                "date_flag": "CHECK",
-                "service": "ひらの丸",
-                "fish": "",
-                "fish_confidence": "",
-                "people_count": "",
-                "catches_per_person": "",
-                "total_catch": "",
-                "status_text": "no posts parsed",
-                "url": top_url,
-                "url_normalized": url_normalize(top_url),
-                "seat_image_url": "",
-                "note": "",
-            }
-        )
-        return pd.DataFrame(rows, dtype=str)
-
     for post in all_posts:
         reservations = extract_reservations_from_post_text(post.get("body_text", ""))
         base_y = None
@@ -667,13 +579,12 @@ def collect_hiranomaru(crawl_time: str) -> pd.DataFrame:
             status = r.get("status_text") or ""
             people = r.get("people_count") or ""
             detail_url = post.get("detail_url") or top_url
-
             title = post.get("title") or ""
-            service = boat if boat else title  # boat/titleを同一列に統合
 
+            service = boat if boat else title
             fish, conf = extract_fish_and_confidence(service=service, fallback=title)
 
-            logical_key = f"hiranomaru|{res_s}|{normalize_space(service)}"
+            logical_key = f"hiranomaru|{res_s}|{normalize_space(service)}|{people}|{status}"
             rid = sha1_text(logical_key)
 
             rows.append(
@@ -687,8 +598,6 @@ def collect_hiranomaru(crawl_time: str) -> pd.DataFrame:
                     "fish": fish,
                     "fish_confidence": conf,
                     "people_count": people,
-                    "catches_per_person": "",
-                    "total_catch": "",
                     "status_text": status,
                     "url": detail_url,
                     "url_normalized": url_normalize(detail_url),
@@ -710,8 +619,6 @@ def collect_hiranomaru(crawl_time: str) -> pd.DataFrame:
                 "fish": "",
                 "fish_confidence": "",
                 "people_count": "",
-                "catches_per_person": "",
-                "total_catch": "",
                 "status_text": "no reservations extracted",
                 "url": top_url,
                 "url_normalized": url_normalize(top_url),
@@ -723,21 +630,11 @@ def collect_hiranomaru(crawl_time: str) -> pd.DataFrame:
     return pd.DataFrame(rows, dtype=str)
 
 
-# =====================
-# 荒川屋：収集（座席図から人数を取る）
-# =====================
-def collect_arakawaya(crawl_time: str) -> pd.DataFrame:
-    """
-    荒川屋は「座席表画像」へのリンクが含まれている想定で、
-    ページ内の画像URL候補から座席図を選び people_count を推定する。
-    予約日が明示されない場合があるので、reservation_date は空のままCHECKにする。
-    """
+def collect_arakawaya(session: requests.Session, crawl_time: str) -> pd.DataFrame:
     top_url = ARAKAWA_URL
-
-    html = fetch_text(top_url)
+    html = fetch_text(session, top_url, referer=top_url)
     soup = BeautifulSoup(html, "html.parser")
 
-    # 画像URL候補
     cand: List[str] = []
     for img in soup.select("img[src]"):
         u = abs_url(top_url, img.get("src", ""))
@@ -747,23 +644,15 @@ def collect_arakawaya(crawl_time: str) -> pd.DataFrame:
         href = a.get("href", "")
         if isinstance(href, str) and re.search(r"\.(png|jpg|jpeg|webp)(\?|$)", href, re.I):
             cand.append(abs_url(top_url, href))
+    cand = list(dict.fromkeys(cand))
 
-    cand = list(dict.fromkeys(cand))  # unique preserve order
+    seat_url, people, note = pick_seat_chart(session, cand, referer=top_url)
 
-    people = ""
-    seat_url = ""
-    note = ""
-
-    with requests.Session() as sess:
-        seat_url, people, note = pick_seat_chart_kamiya(sess, cand)
-
-    # サービス名（ページタイトル優先）
     title = ""
     t = soup.select_one("title")
     if t:
         title = normalize_space(t.get_text(" ", strip=True))
     service = "荒川屋"
-
     fish, conf = extract_fish_and_confidence(service=service, fallback=title)
 
     rid = sha1_text("arakawaya|seat|" + url_normalize(seat_url or top_url) + "|" + (people or ""))
@@ -779,8 +668,6 @@ def collect_arakawaya(crawl_time: str) -> pd.DataFrame:
             "fish": fish,
             "fish_confidence": conf,
             "people_count": people,
-            "catches_per_person": "",
-            "total_catch": "",
             "status_text": "seat_chart" if seat_url else "no_seat_chart",
             "url": seat_url or top_url,
             "url_normalized": url_normalize(seat_url or top_url),
@@ -791,82 +678,12 @@ def collect_arakawaya(crawl_time: str) -> pd.DataFrame:
     return pd.DataFrame(rows, dtype=str)
 
 
-# =====================
-# main（Excelに蓄積）
-# =====================
 def main() -> None:
     ensure_dirs()
     crawl_time = now_jst_str()
-
     old_log = load_log(OUT_XLSX, SHEET_ALL)
 
-    parts: List[pd.DataFrame] = []
-
-    # 荒川屋
-    try:
-        parts.append(collect_arakawaya(crawl_time))
-    except Exception as e:
-        rid = sha1_text("arakawaya|error|" + repr(e))
-        parts.append(
-            pd.DataFrame(
-                [
-                    {
-                        "record_id": rid,
-                        "crawl_time": crawl_time,
-                        "site_name": "荒川屋",
-                        "reservation_date": "",
-                        "date_flag": "CHECK",
-                        "service": "荒川屋",
-                        "fish": "",
-                        "fish_confidence": "",
-                        "people_count": "",
-                        "catches_per_person": "",
-                        "total_catch": "",
-                        "status_text": f"failed: {repr(e)}",
-                        "url": ARAKAWA_URL,
-                        "url_normalized": url_normalize(ARAKAWA_URL),
-                        "seat_image_url": "",
-                        "note": "",
-                    }
-                ],
-                dtype=str,
-            )
-        )
-
-    # ひらの丸
-    try:
-        parts.append(collect_hiranomaru(crawl_time))
-    except Exception as e:
-        rid = sha1_text("hiranomaru|error|" + repr(e))
-        parts.append(
-            pd.DataFrame(
-                [
-                    {
-                        "record_id": rid,
-                        "crawl_time": crawl_time,
-                        "site_name": "ひらの丸",
-                        "reservation_date": "",
-                        "date_flag": "CHECK",
-                        "service": "ひらの丸",
-                        "fish": "",
-                        "fish_confidence": "",
-                        "people_count": "",
-                        "catches_per_person": "",
-                        "total_catch": "",
-                        "status_text": f"failed: {repr(e)}",
-                        "url": HIRANO_BASE_URL,
-                        "url_normalized": url_normalize(HIRANO_BASE_URL),
-                        "seat_image_url": "",
-                        "note": "",
-                    }
-                ],
-                dtype=str,
-            )
-        )
-
-    new_log = pd.concat(parts, ignore_index=True) if parts else pd.DataFrame()
-
-    out_cols = [
+    cols = [
         "record_id",
         "crawl_time",
         "site_name",
@@ -876,8 +693,6 @@ def main() -> None:
         "fish",
         "fish_confidence",
         "people_count",
-        "catches_per_person",
-        "total_catch",
         "status_text",
         "url",
         "url_normalized",
@@ -885,18 +700,79 @@ def main() -> None:
         "note",
     ]
 
-    for c in out_cols:
+    with make_session() as session:
+        parts: List[pd.DataFrame] = []
+
+        # 荒川屋
+        try:
+            parts.append(collect_arakawaya(session, crawl_time))
+        except Exception as e:
+            rid = sha1_text("arakawaya|error|" + repr(e))
+            parts.append(
+                pd.DataFrame(
+                    [
+                        {
+                            "record_id": rid,
+                            "crawl_time": crawl_time,
+                            "site_name": "荒川屋",
+                            "reservation_date": "",
+                            "date_flag": "CHECK",
+                            "service": "荒川屋",
+                            "fish": "",
+                            "fish_confidence": "",
+                            "people_count": "",
+                            "status_text": f"failed: {repr(e)}",
+                            "url": ARAKAWA_URL,
+                            "url_normalized": url_normalize(ARAKAWA_URL),
+                            "seat_image_url": "",
+                            "note": "arakawaya_fetch_failed",
+                        }
+                    ],
+                    dtype=str,
+                )
+            )
+
+        # ひらの丸
+        try:
+            parts.append(collect_hiranomaru(session, crawl_time))
+        except Exception as e:
+            rid = sha1_text("hiranomaru|error|" + repr(e))
+            parts.append(
+                pd.DataFrame(
+                    [
+                        {
+                            "record_id": rid,
+                            "crawl_time": crawl_time,
+                            "site_name": "ひらの丸",
+                            "reservation_date": "",
+                            "date_flag": "CHECK",
+                            "service": "ひらの丸",
+                            "fish": "",
+                            "fish_confidence": "",
+                            "people_count": "",
+                            "status_text": f"failed: {repr(e)}",
+                            "url": HIRANO_BASE_URL,
+                            "url_normalized": url_normalize(HIRANO_BASE_URL),
+                            "seat_image_url": "",
+                            "note": "hiranomaru_fetch_failed",
+                        }
+                    ],
+                    dtype=str,
+                )
+            )
+
+    new_log = pd.concat(parts, ignore_index=True) if parts else pd.DataFrame()
+    for c in cols:
         if c not in new_log.columns:
             new_log[c] = ""
         if not old_log.empty and c not in old_log.columns:
             old_log[c] = ""
 
-    new_log = new_log[out_cols].astype(str)
+    new_log = new_log[cols].astype(str)
     if not old_log.empty:
-        old_log = old_log[out_cols].astype(str)
+        old_log = old_log[cols].astype(str)
 
     merged = append_dedup_by_id(old_log, new_log, id_col="record_id")
-
     save_log(OUT_XLSX, SHEET_ALL, merged)
 
     print("Saved:", OUT_XLSX)
