@@ -11,6 +11,7 @@ import pandas as pd
 # ===== 設定 =====
 SRC = Path("data/funaduri_daily.xlsx")      # 元データExcel
 SHEET_CANDIDATES = ["all_fish", "allfish"] # シート名ゆれ対策
+SHEET_KASHI = "kashimamaru"                # 鹿島丸シート名（run_daily.py で作成）
 OUT_MD = Path("reports/report.md")
 
 # 任意：日次集計をためる（長期運用で便利）
@@ -22,23 +23,63 @@ WINDOW_YEAR = 365
 # TOP5の対象にする最小隻数（魚種内比較が成立する範囲）
 MIN_RECORDS_FOR_TOP5 = 3
 
+# 「タチウオ」とみなす魚種名（必要なら追加）
+TACHIUO_NAMES = {"タチウオ", "太刀魚"}
 
-# ===== 文字列レンジのパース =====
-# Excel実データでは "X" が "〜" の代替として混ざっていました（例: "0.3X-1.5Xkg", "X-4 杯"）
-# ここでは X をレンジ記号として扱い、数字レンジに直します。
-def normalize_range_text(s: str) -> str:
+
+# =========================================================
+# X表記の扱い（仕様）
+# - 1桁の "X" は 0 扱い（保守的）
+# - 2桁の "1X" は 15（10〜19の中央値）, "2X" は 25 ...
+# - 小数の "0.4X" は 0.45（0.40〜0.49の中央値）
+# - レンジ "0-1X" は両端を上のルールで数値化して (min,max) を作る
+# - 表示は「中央値（(min+max)/2）」の単値を基本にする
+# =========================================================
+
+def _x_token_to_value(token: str) -> float | None:
+    """
+    token: 'X', '1X', '2X', '0.4X', '12', '3.5' など
+    返り値: 数値化できればfloat、できなければNone
+    """
+    t = token.strip()
+    if not t:
+        return None
+
+    # 小数+X：例 0.4X -> 0.45
+    m = re.fullmatch(r"(\d+)\.(\d)X", t)
+    if m:
+        return float(f"{m.group(1)}.{m.group(2)}5")
+
+    # 1桁 X：例 X -> 0
+    if t == "X":
+        return 0.0
+
+    # 2桁 X：例 1X -> 15, 2X -> 25
+    m = re.fullmatch(r"(\d)X", t)
+    if m:
+        return float(int(m.group(1)) * 10 + 5)
+
+    # 通常の数値
+    m = re.fullmatch(r"\d+(?:\.\d+)?", t)
+    if m:
+        return float(t)
+
+    return None
+
+
+def _pre_normalize(s: str) -> str:
+    """
+    文字のゆれを軽く統一（レンジ記号だけ）。
+    Xは意味があるので消さない。
+    """
     s = s.strip()
-    # 例: "X-4" = "0-4" とみなす（下限が欠けるケース）
-    s = re.sub(r"^X-", "0-", s)
-    # 数値の後に出るXは「〜」相当として削る（"0.3X-1.5Xkg" -> "0.3-1.5kg"）
-    s = s.replace("X", "")
-    # "〜" "～" を "-" に統一
+    s = s.replace("－", "-").replace("—", "-").replace("―", "-")
     s = s.replace("〜", "-").replace("～", "-")
     return s
 
 
 def parse_range(val) -> tuple[float, float]:
-    """ '18-40 尾' / '45cm' / 'X-4 杯' などを (min, max) に """
+    """ '18-40 尾' / '45cm' / 'X-4 杯' / '0-1X 本' / '0.4Xkg' などを (min, max) に """
     if pd.isna(val):
         return (np.nan, np.nan)
 
@@ -46,31 +87,40 @@ def parse_range(val) -> tuple[float, float]:
     if s in {"", "－", "-", "—", "―"}:
         return (np.nan, np.nan)
 
-    s = normalize_range_text(s)
+    s = _pre_normalize(s)
 
-    # 数字・小数点・ハイフン以外を除去（単位などを落とす）
-    s2 = re.sub(r"[^\d\.\-]", "", s)
-    if not re.search(r"\d", s2):
-        return (np.nan, np.nan)
+    # レンジ（A-B）をまず探す（単位は後ろに付くので無視）
+    # A/B は 'X', '1X', '0.4X', '12', '3.5' などを許容
+    m = re.search(
+        r"(?P<a>(?:\d+\.\dX)|(?:\dX)|X|(?:\d+(?:\.\d+)?))\s*-\s*(?P<b>(?:\d+\.\dX)|(?:\dX)|X|(?:\d+(?:\.\d+)?))",
+        s,
+    )
+    if m:
+        a = _x_token_to_value(m.group("a"))
+        b = _x_token_to_value(m.group("b"))
+        if a is None and b is None:
+            return (np.nan, np.nan)
+        if a is None:
+            return (b, b)
+        if b is None:
+            return (a, a)
+        return (min(a, b), max(a, b))
 
-    parts = [p for p in s2.split("-") if p]
-    nums = []
-    for p in parts[:2]:
-        try:
-            nums.append(float(p))
-        except ValueError:
-            pass
+    # 単値（最初に見つかった数値トークンを使う）
+    m = re.search(r"(\d+\.\dX|\dX|X|\d+(?:\.\d+)?)", s)
+    if m:
+        v = _x_token_to_value(m.group(1))
+        if v is None:
+            return (np.nan, np.nan)
+        return (v, v)
 
-    if len(nums) == 0:
-        return (np.nan, np.nan)
-    if len(nums) == 1:
-        return (nums[0], nums[0])
-    return (min(nums), max(nums))
+    return (np.nan, np.nan)
 
 
 def mean_from_range_series(series: pd.Series) -> pd.Series:
     mm = series.apply(lambda x: pd.Series(parse_range(x), index=["min", "max"]))
-    return mm[["min", "max"]].mean(axis=1)
+    # min,max がどっちか欠けても平均が取れるように（片方だけならその値）
+    return mm[["min", "max"]].mean(axis=1, skipna=True)
 
 
 def pct_vs(today: float, base: float) -> float:
@@ -90,9 +140,9 @@ def extract_unit(text) -> str:
     """ '18-40 尾' -> '尾'  '0.3-1.5kg' -> 'kg' など。取れなければ空 """
     if pd.isna(text):
         return ""
-    s = normalize_range_text(str(text))
-    # 数字/./-/空白を落とした残りを単位とみなす
-    s = re.sub(r"[\d\.\-\s]", "", s)
+    s = _pre_normalize(str(text))
+    # 数字/./-/X/空白を落とした残りを単位とみなす（Xは数値側の記号なので落とす）
+    s = re.sub(r"[\d\.\-\sX]", "", s)
     return s.strip()
 
 
@@ -116,8 +166,56 @@ def pick_sheet(xls: pd.ExcelFile) -> str:
     for s in SHEET_CANDIDATES:
         if s in xls.sheet_names:
             return s
-    # 見つからなければ先頭
     return xls.sheet_names[0]
+
+
+def normalize_kashimamaru(df_k: pd.DataFrame) -> pd.DataFrame:
+    """
+    kashimamaru シートの列（例: 日付, 釣り物, 数量, 型, 場所, 備考）を
+    all_fish 互換（date, fish_name, area_port, yado, choka, size, source, url）に寄せる
+    """
+    if df_k is None or df_k.empty:
+        return pd.DataFrame(columns=["date", "fish_name", "area_port", "yado", "choka", "size", "source", "url"])
+
+    # 列名ゆれ対策（最低限）
+    colmap = {
+        "日付": "date",
+        "釣り物": "fish_name",
+        "数量": "choka",
+        "型": "size",
+        "場所": "area_port",
+        "備考": "note",
+    }
+    df = df_k.rename(columns={k: v for k, v in colmap.items() if k in df_k.columns}).copy()
+
+    # 必須の欠けは空で作る
+    for c in ["date", "fish_name", "choka", "size", "area_port"]:
+        if c not in df.columns:
+            df[c] = np.nan
+
+    df["yado"] = "鹿島丸"
+    df["source"] = "kashimamaru"
+
+    # URLは固定で入れておく（リンク不要なら空でもOK）
+    # run_daily 側で保存していない可能性があるのでここで付与
+    df["url"] = "https://www.aqualine.jp/kashimamaru/"  # 変更したければここだけ
+
+    # 形式を all_fish と揃える
+    keep = ["date", "fish_name", "area_port", "yado", "choka", "size", "source", "url"]
+    df = df[keep].copy()
+
+    # area_port は funaduri が「地域 / 港」形式なので、鹿島丸は「鹿島丸 / 場所」に寄せる
+    df["area_port"] = df["area_port"].astype(str).where(df["area_port"].notna(), "")
+    df["area_port"] = df["area_port"].apply(lambda x: f"鹿島丸 / {x}".strip(" /") if x and x != "nan" else "鹿島丸")
+
+    return df
+
+
+def is_tachiuo_fishname(name: str) -> bool:
+    if not isinstance(name, str):
+        return False
+    n = name.strip()
+    return n in TACHIUO_NAMES or ("タチウオ" in n) or ("太刀魚" in n)
 
 
 def main() -> None:
@@ -125,6 +223,8 @@ def main() -> None:
         raise FileNotFoundError(f"Source file not found: {SRC}")
 
     xls = pd.ExcelFile(SRC)
+
+    # ===== all_fish 読み込み =====
     sheet = pick_sheet(xls)
     df = pd.read_excel(SRC, sheet_name=sheet)
 
@@ -133,6 +233,23 @@ def main() -> None:
     missing = required - set(df.columns)
     if missing:
         raise ValueError(f"Missing columns in sheet '{sheet}': {missing}")
+
+    # ===== kashimamaru 読み込み（あれば混ぜる） =====
+    if SHEET_KASHI in xls.sheet_names:
+        df_k_raw = pd.read_excel(SRC, sheet_name=SHEET_KASHI)
+        df_k = normalize_kashimamaru(df_k_raw)
+        # all_fish と同じ列へ（存在しない列は追加）
+        for c in ["source", "url"]:
+            if c not in df.columns:
+                df[c] = ""
+        df = df[["date", "fish_name", "area_port", "yado", "choka", "size", "source", "url"]].copy()
+        df = pd.concat([df, df_k], ignore_index=True)
+    else:
+        # ない場合でも detail 出力列が揃うように
+        if "source" not in df.columns:
+            df["source"] = ""
+        if "url" not in df.columns:
+            df["url"] = ""
 
     # 日付整形
     df["date"] = pd.to_datetime(df["date"], errors="coerce").dt.date
@@ -158,7 +275,6 @@ def main() -> None:
     # =========================
     # A) 主要指標テーブル（隻数順）
     # =========================
-    # 今日の魚種別単位（表示用：魚種ごとに最頻単位）
     unit_today = (
         df_today.groupby("fish_name")
         .agg(
@@ -168,7 +284,6 @@ def main() -> None:
         .reset_index()
     )
 
-    # 今日の集計（隻数=records）
     g_today = (
         df_today.groupby("fish_name")
         .agg(
@@ -179,7 +294,6 @@ def main() -> None:
         .reset_index()
     )
 
-    # 過去平均
     g_month = (
         df_month.groupby("fish_name")
         .agg(choka_month=("choka_mean", "mean"), size_month=("size_mean", "mean"))
@@ -197,13 +311,11 @@ def main() -> None:
         .merge(unit_today, on="fish_name", how="left")
     )
 
-    # 対比（％）
     out["choka_yoy"] = out.apply(lambda r: pct_vs(r["choka_today"], r["choka_year"]), axis=1)
     out["choka_mom"] = out.apply(lambda r: pct_vs(r["choka_today"], r["choka_month"]), axis=1)
     out["size_yoy"] = out.apply(lambda r: pct_vs(r["size_today"], r["size_year"]), axis=1)
     out["size_mom"] = out.apply(lambda r: pct_vs(r["size_today"], r["size_month"]), axis=1)
 
-    # 表セル化（括弧で年/月）
     out["catch_cell"] = out.apply(
         lambda r: fmt_value_with_comp(r["choka_today"], r.get("catch_unit", "") or "", r["choka_yoy"], r["choka_mom"]),
         axis=1,
@@ -218,39 +330,42 @@ def main() -> None:
 
     # =========================
     # B) サマリー：魚種内で突出した船 TOP5
-    #    ルール：同魚種内で（平均との差%）が最大の船を魚種ごとに1件選び、
-    #           それを突出率で並べて上位5件
     # =========================
-    # 今日の魚種別平均（比較基準）
     fish_mean_today = df_today.groupby("fish_name")["choka_mean"].mean()
 
     df_top = df_today.copy()
     df_top["fish_mean"] = df_top["fish_name"].map(fish_mean_today)
     df_top["vs_others_pct"] = (df_top["choka_mean"] / df_top["fish_mean"] - 1.0) * 100.0
 
-    # 魚種内比較が成立する魚種のみ
     fish_counts = df_today.groupby("fish_name")["fish_name"].size()
     valid_fish = fish_counts[fish_counts >= MIN_RECORDS_FOR_TOP5].index
     df_top = df_top[df_top["fish_name"].isin(valid_fish)]
 
-    # 魚種ごとに “最も突出した1件” を抽出
     idx = df_top.groupby("fish_name")["vs_others_pct"].idxmax()
     df_top_best_each_fish = df_top.loc[idx].copy()
 
-    # 全体で突出率順 TOP5
     df_top5 = df_top_best_each_fish.sort_values("vs_others_pct", ascending=False).head(5)
+
+    # =========================
+    # B-2) タチウオ限定ランキング TOP5（鹿島丸含む）
+    # =========================
+    df_tachiuo = df_today[df_today["fish_name"].apply(is_tachiuo_fishname)].copy()
+    if not df_tachiuo.empty:
+        t_mean = df_tachiuo["choka_mean"].mean()
+        df_tachiuo["fish_mean"] = t_mean
+        df_tachiuo["vs_others_pct"] = (df_tachiuo["choka_mean"] / df_tachiuo["fish_mean"] - 1.0) * 100.0
+        df_tachiuo_top5 = df_tachiuo.sort_values("choka_mean", ascending=False).head(5)
+    else:
+        df_tachiuo_top5 = df_tachiuo
 
     # =========================
     # C) 履歴CSV（任意）
     # =========================
-    # fish_name単位の日次集計を蓄積（将来の解析に便利）
     HISTORY_CSV.parent.mkdir(parents=True, exist_ok=True)
     daily_metrics = out[["fish_name", "records", "choka_today", "size_today"]].copy()
     daily_metrics.insert(0, "date", today)
-    # 追記（同日があれば置換）
     if HISTORY_CSV.exists():
         hist = pd.read_csv(HISTORY_CSV)
-        # date列を文字として扱い、同日削除→追記
         hist = hist[hist["date"] != str(today)]
         hist = pd.concat([hist, daily_metrics], ignore_index=True)
         hist.to_csv(HISTORY_CSV, index=False)
@@ -262,7 +377,7 @@ def main() -> None:
     # =========================
     OUT_MD.parent.mkdir(parents=True, exist_ok=True)
 
-    md = []
+    md: list[str] = []
     md.append("# 📊 Daily Fish Report")
     md.append(f"**{today}**")
     md.append("")
@@ -274,7 +389,6 @@ def main() -> None:
         md.append("- （本日は比較可能な魚種（隻数>=3）がありませんでした）")
     else:
         for i, r in enumerate(df_top5.itertuples(index=False), start=1):
-            # 表示：船（場所）— 魚種 釣果（他船対比 +○％）
             fish = r.fish_name
             boat = r.yado
             loc = r.area_port
@@ -285,6 +399,30 @@ def main() -> None:
                 md.append(f"{i}. **{boat}**（**{loc}**）— {fish} NA（他船対比 {pct}）")
             else:
                 md.append(f"{i}. **{boat}**（**{loc}**）— {fish} **{catch_val}{catch_unit}（他船対比 {pct}）**")
+
+    md.append("")
+    md.append("## ⚔ タチウオ限定ランキング")
+    md.append("")
+    md.append("### 🥇 今日のタチウオ船 TOP5（中央値）")
+    if df_tachiuo_top5 is None or len(df_tachiuo_top5) == 0:
+        md.append("- （本日はタチウオのレコードがありませんでした）")
+    else:
+        # 参考：他船対比は「タチウオの平均」に対する比
+        if df_tachiuo["fish_mean"].notna().any() if not df_tachiuo.empty else False:
+            t_mean_val = df_tachiuo["fish_mean"].iloc[0]
+        else:
+            t_mean_val = np.nan
+
+        for i, r in enumerate(df_tachiuo_top5.itertuples(index=False), start=1):
+            boat = r.yado
+            loc = r.area_port
+            unit = extract_unit(r.choka)
+            val = int(round(r.choka_mean)) if not pd.isna(r.choka_mean) else None
+            pct = fmt_pct((r.choka_mean / t_mean_val - 1.0) * 100.0) if (val is not None and not pd.isna(t_mean_val) and t_mean_val != 0) else "NA"
+            if val is None:
+                md.append(f"{i}. **{boat}**（**{loc}**）— NA（他船対比 {pct}）")
+            else:
+                md.append(f"{i}. **{boat}**（**{loc}**）— **{val}{unit}（他船対比 {pct}）**")
 
     md.append("")
     md.append("## 📊 今日の主要指標（隻数順）")
@@ -299,12 +437,15 @@ def main() -> None:
     md.append("<summary>📊 詳細（今日の全レコード）</summary>")
     md.append("")
     detail_cols = ["fish_name", "yado", "area_port", "choka", "size", "source", "url"]
+    for c in detail_cols:
+        if c not in df_today.columns:
+            df_today[c] = ""
     detail = df_today[detail_cols].copy()
     md.append(detail.to_markdown(index=False))
     md.append("")
     md.append("</details>")
     md.append("")
-    md.append(f"Source: `{SRC}` / sheet: `{sheet}`")
+    md.append(f"Source: `{SRC}` / sheet: `{sheet}`" + (f" + `{SHEET_KASHI}`" if SHEET_KASHI in xls.sheet_names else ""))
 
     OUT_MD.write_text("\n".join(md), encoding="utf-8")
     print(f"Wrote: {OUT_MD}")
