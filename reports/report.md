@@ -1,401 +1,257 @@
 # 📊 Daily Fish Report
-**2026-05-06**
+**2026-05-07**
 
 ## 📝 サマリー
 
 ### 🏆 今日の“魚種内突出船” TOP5
-1. **大洗丸**（**茨城 / 大洗**）— マダイ **9尾（他船対比 +265%）**
-2. **巳之助丸**（**三浦半島 / 久比里**）— アジ **88尾（他船対比 +184%）**
-3. **忠彦丸船(19ﾄﾝ)**（**横浜 / 金沢漁港**）— タチウオ **8本（他船対比 +183%）**
-4. **二三丸船(14ﾄﾝ)**（**外房 / 片貝**）— キンメ **25尾（他船対比 +163%）**
-5. **福重丸**（**茨城 / 大洗**）— ショウサイフグ **30尾（他船対比 +155%）**
+1. **幸丸船(19ﾄﾝ,19ﾄﾝ,19ﾄﾝ,19ﾄﾝ,19ﾄﾝ,19ﾄﾝ)**（**外房 / 飯岡**）— マダイ **9尾（他船対比 +251%）**
+2. **光明丸**（**南伊豆 / 下田須崎**）— イサキ **75尾（他船対比 +203%）**
+3. **久寿丸船(13ﾄﾝ)**（**南伊豆 / 下田須崎**）— メダイ **16尾（他船対比 +182%）**
+4. **龍鳳丸船(13ﾄﾝ)**（**外房 / 飯岡**）— ハナダイ **25尾（他船対比 +178%）**
+5. **山下丸船(19ﾄﾝ)**（**三浦半島 / 久比里**）— カサゴ **28尾（他船対比 +133%）**
 
 ## ⚔ タチウオ限定ランキング
 
 ### 🥇 今日のタチウオ船 TOP5（中央値）
-1. **忠彦丸船(19ﾄﾝ)**（**横浜 / 金沢漁港**）— **8本（他船対比 +183%）**
-2. **吉久船(19ﾄﾝ)**（**東京湾奥 / 浦安**）— **4本（他船対比 +51%）**
-3. **吉野屋船(8ﾄﾝ)**（**東京湾奥 / 浦安**）— **2本（他船対比 -6%）**
-4. **一之瀬丸船(13ﾄﾝ)**（**横浜 / 金沢八景**）— **2本（他船対比 -6%）**
-5. **こなや丸**（**内房 / 長浦**）— **2本（他船対比 -6%）**
+1. **吉久船(19ﾄﾝ)**（**東京湾奥 / 浦安**）— **2本（他船対比 +60%）**
+2. **こうゆう丸船(19ﾄﾝ,16ﾄﾝ)**（**三浦半島 / 新安浦**）— **2本（他船対比 +20%）**
+3. **五郎丸船(13ﾄﾝ,13ﾄﾝ)**（**三浦半島 / 鴨居**）— **1本（他船対比 -20%）**
+4. **石川丸**（**三浦半島 / 鴨居**）— **0本（他船対比 -60%）**
 
 ## 📊 今日の主要指標（隻数順）
 
 | fish_name | 隻数 | 釣果（年 / 月） | サイズ（年 / 月） |
 |---|---:|---|---|
-| アジ | 66 | 31尾（-13% / -15%） | 26cm（-2% / -4%） |
-| マダイ | 59 | 2尾（+4% / +3%） | 4kg（+71% / +56%） |
-| マルイカ | 26 | 17杯（+8% / +14%） | 23cm（-1% / -2%） |
-| シロギス | 20 | 34尾（-18% / -11%） | 19cm（-1% / -1%） |
-| ショウサイフグ | 16 | 12尾（+27% / +29%） | 29cm（-2% / -1%） |
-| イサキ | 15 | 28尾（+17% / +15%） | 29cm（-1% / 0%） |
-| タチウオ | 10 | 3本（-56% / -59%） | 67cm（-5% / +2%） |
-| カサゴ | 8 | 19尾（-14% / -5%） | 23cm（+8% / +4%） |
-| マゴチ | 8 | 5尾（+33% / +29%） | 51cm（+7% / +5%） |
-| ムギイカ | 8 | 29杯（-13% / -16%） | 23cm（+8% / +10%） |
-| ヒラメ | 7 | 1枚（-21% / +6%） | 2kg（-7% / -10%） |
-| ハナダイ | 6 | 16尾（+36% / +205%） | 24cm（+10% / +28%） |
-| ヤリイカ | 6 | 29杯（+257% / +170%） | 39cm（+8% / +6%） |
-| オニカサゴ | 5 | 1尾（-49% / -40%） | 12kg（+43% / +139%） |
-| カワハギ | 5 | 7尾（+28% / -6%） | 22cm（-3% / -6%） |
-| クロダイ | 5 | 4尾（-21% / -29%） | 25cm（-28% / -22%） |
-| マダコ | 4 | 2杯（-12% / -18%） | 1kg（-15% / +0%） |
-| ワラサ | 4 | 3尾（-13% / -25%） | 4kg（-46% / -50%） |
-| アマダイ | 3 | 1尾（-57% / -49%） | 29cm（-12% / -11%） |
-| イシモチ | 3 | 15尾（-7% / 0%） | 26cm（-2% / -3%） |
-| キンメ | 3 | 10尾（-4% / +13%） | 22cm（-19% / -16%） |
-| スルメイカ | 3 | 18杯（+71% / +87%） | 26cm（-20% / -10%） |
-| マハタ | 3 | 2尾（+32% / +48%） | 1kg（-55% / -70%） |
-| カンパチ | 2 | 1尾（+6% / -2%） | 7kg（-13% / -24%） |
-| クロムツ | 2 | 6尾（-23% / -7%） | 34cm（+9% / +9%） |
-| サバ | 2 | 13尾（-11% / +27%） | 35cm（+2% / +4%） |
-| シマアジ | 2 | 0尾（-74% / -61%） | 28kg（+507% / +1198%） |
-| メジナ | 2 | 4尾（+56% / +56%） | 1kg（-81% / -81%） |
-| メダイ | 2 | 9尾（+42% / +21%） | 3kg（-29% / -40%） |
-| メバル | 2 | 7尾（-36% / -29%） | 28cm（-4% / -4%） |
-| アナゴ | 1 | 18本（+1% / +1%） | 35cm（0% / 0%） |
-| アラ | 1 | 2尾（+3% / +16%） | 3kg（-16% / -16%） |
-| イカ | 1 | 18杯（+228% / +46%） | 40cm（+95% / +16%） |
-| イシナギ | 1 | 0尾（-55% / -55%） | 8kg（-45% / -45%） |
-| イナダ | 1 | 3尾（-24% / +62%） | 55cm（+54% / +113%） |
-| ウメイロ | 1 | 4尾（NA / NA） | 1kg（NA / NA） |
-| キントキ | 1 | 1尾（-82% / -82%） | 45cm（+35% / +34%） |
-| シーバス | 1 | 9尾（-22% / +56%） | 56cm（+3% / +3%） |
-| タイ | 1 | 6尾（+309% / +212%） | 1kg（-49% / -4%） |
-| ヒラマサ | 1 | 1尾（+30% / +24%） | 2kg（-72% / -80%） |
-| ホウボウ | 1 | 3尾（-17% / +9%） | 32cm（-2% / -4%） |
-| ムラソイ | 1 | 0尾（NA / NA） | 25cm（NA / NA） |
-| メヌケ | 1 | 8尾（+172% / +236%） | 2kg（-28% / -32%） |
-| 沖カサゴ | 1 | 15尾（+97% / +84%） | 40cm（+76% / +115%） |
-| 沖メバル | 1 | 20尾（+6% / +34%） | 32cm（+26% / +21%） |
+| マダイ | 45 | 3尾（+8% / +7%） | 2kg（+2% / -9%） |
+| アジ | 34 | 36尾（+1% / +1%） | 29cm（+9% / +7%） |
+| マルイカ | 13 | 18杯（+15% / +23%） | 23cm（+2% / +0%） |
+| イサキ | 11 | 25尾（+1% / +0%） | 30cm（+5% / +5%） |
+| ショウサイフグ | 6 | 7尾（-23% / -23%） | 30cm（+1% / +2%） |
+| ムギイカ | 5 | 22杯（-33% / -35%） | 24cm（+13% / +15%） |
+| アマダイ | 4 | 5尾（+83% / +127%） | 38cm（+14% / +15%） |
+| シロギス | 4 | 28尾（-33% / -27%） | 19cm（-3% / -2%） |
+| タチウオ | 4 | 1本（-79% / -80%） | 81cm（+15% / +23%） |
+| ハナダイ | 4 | 9尾（-27% / +42%） | 13kg（-39% / -30%） |
+| ヒラメ | 4 | 1枚（-26% / -2%） | 2kg（-19% / -22%） |
+| カサゴ | 3 | 12尾（-46% / -39%） | 17cm（-21% / -23%） |
+| カワハギ | 3 | 6尾（+12% / -19%） | 23cm（+5% / +3%） |
+| クロダイ | 3 | 8尾（+54% / +36%） | 27cm（-22% / -14%） |
+| スルメイカ | 3 | 25杯（+127% / +128%） | 29cm（-12% / +1%） |
+| ホウボウ | 3 | 2尾（-45% / -28%） | 37cm（+11% / +9%） |
+| メダイ | 3 | 6尾（-14% / -28%） | 3kg（-29% / -38%） |
+| イナダ | 2 | 2尾（-49% / +4%） | 27cm（-25% / +4%） |
+| キントキ | 2 | 6尾（+2% / +4%） | 38cm（+12% / +12%） |
+| クロムツ | 2 | 4尾（-50% / -40%） | 34cm（+11% / +10%） |
+| トラフグ | 2 | 1尾（-19% / -35%） | 4kg（-16% / -24%） |
+| マダコ | 2 | 2杯（+14% / +7%） | 2kg（+9% / +27%） |
+| マハタ | 2 | 2尾（+18% / +31%） | 2kg（-42% / -61%） |
+| メバル | 2 | 12尾（+9% / +21%） | 30cm（+3% / +3%） |
+| ヤリイカ | 2 | 20杯（+137% / +67%） | 38cm（+7% / +4%） |
+| ワラサ | 2 | 5尾（+52% / +31%） | 4kg（-39% / -44%） |
+| アオリイカ | 1 | 2杯（+58% / +86%） | 1kg（-39% / -19%） |
+| アナゴ | 1 | 25本（+41% / +41%） | 35cm（0% / 0%） |
+| アラ | 1 | 1尾（-32% / -26%） | 3kg（-12% / -14%） |
+| イカ | 1 | 25杯（+344% / +97%） | 38cm（+78% / +6%） |
+| イシナギ | 1 | 0尾（-50% / -50%） | 12kg（-15% / -15%） |
+| オナガダイ | 1 | 1尾（-65% / -60%） | 1kg（-38% / -40%） |
+| オニカサゴ | 1 | 1尾（-63% / -55%） | 2kg（-80% / -71%） |
+| キンメ | 1 | 15尾（+52% / +76%） | 35cm（+29% / +30%） |
+| サバ | 1 | 22尾（+51% / +110%） | 38cm（+12% / +14%） |
+| シマアジ | 1 | 2尾（-16% / +20%） | 1kg（-85% / -79%） |
+| タイ | 1 | 2尾（+55% / +13%） | 2kg（-12% / +62%） |
+| マゾイ | 1 | 1尾（+33% / +33%） | 30cm（-9% / -9%） |
+| マトウダイ | 1 | 1尾（+0% / +0%） | 38cm（-3% / -3%） |
+| ムラソイ | 1 | 1尾（+100% / +100%） | 35cm（+40% / +40%） |
 
 <details>
 <summary>📊 詳細（今日の全レコード）</summary>
 
-| fish_name   | yado                               | area_port     | choka    | size        | source   | url                                         |
-|:------------|:-----------------------------------|:--------------|:---------|:------------|:---------|:--------------------------------------------|
-| アジ          | 船宿豆や船(14ﾄﾝ)                        | 東京湾奥 / 新中川鹿本橋 | 2X-5X 尾  | 2X-3Xcm     | ぎょさん     | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 一之瀬丸船(13ﾄﾝ)                        | 横浜 / 金沢八景     | 4-4X 尾   | 1X-2Xcm     | ぎょさん     | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 教至丸船(12ﾄﾝ)                         | 三浦半島 / 走水     | 30-93 尾  | 20-35cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 石川丸                                | 三浦半島 / 鴨居     | 32-99 尾  | 21-38cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 千良丸                                | 三浦半島 / 剣崎間口   | 6-30 尾   | 12-30cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| カワハギ        | 山天丸船(19ﾄﾝ)                         | 三浦半島 / 久比里    | X-8 尾    | 1X-2X.5cm   | －        | https://funaduri.jp/fish.cgi?fish=kawahagi  |
-| クロダイ        | 黒川丸船(19ﾄﾝ)                         | 三浦半島 / 久里浜    | 0-1X 尾   | 3X-4Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=kurodai   |
-| ショウサイフグ     | 福重丸                                | 茨城 / 大洗       | 1X-4X 尾  | 1X-3Xcm     | 釣り船.COM  | https://funaduri.jp/fish.cgi?fish=fugu      |
-| ショウサイフグ     | きよ丸船(5ﾄﾝ)                          | 茨城 / 大洗       | 25 尾     | 17-42cm     | －        | https://funaduri.jp/fish.cgi?fish=fugu      |
-| ショウサイフグ     | 長岡丸船(18ﾄﾝ)                         | 茨城 / 鹿島       | 3-15 尾   | 28-43cm     | －        | https://funaduri.jp/fish.cgi?fish=fugu      |
-| ショウサイフグ     | 野毛屋釣船店船(16ﾄﾝ)                      | 横浜 / 金沢八景     | 0-11 尾   | 20-43cm     | －        | https://funaduri.jp/fish.cgi?fish=fugu      |
-| シロギス        | 船宿豆や船(14ﾄﾝ)                        | 東京湾奥 / 新中川鹿本橋 | 1X-8X 尾  | 1X-2Xcm     | ぎょさん     | https://funaduri.jp/fish.cgi?fish=kisu      |
-| シロギス        | 一之瀬丸船(13ﾄﾝ)                        | 横浜 / 金沢八景     | 1X-6X 尾  | 1X-2Xcm     | ぎょさん     | https://funaduri.jp/fish.cgi?fish=kisu      |
-| タチウオ        | 一之瀬丸船(13ﾄﾝ)                        | 横浜 / 金沢八景     | X-5 本    | 75-11Xcm    | ぎょさん     | https://funaduri.jp/fish.cgi?fish=tatiuo    |
-| タチウオ        | こうゆう丸船(19ﾄﾝ,16ﾄﾝ)                  | 三浦半島 / 新安浦    | 0-3 本    | 65-105cm    | －        | https://funaduri.jp/fish.cgi?fish=tatiuo    |
-| タチウオ        | 石川丸                                | 三浦半島 / 鴨居     | 0-1 本    | 60-95cm     | －        | https://funaduri.jp/fish.cgi?fish=tatiuo    |
-| ヒラメ         | 五エム丸船(19ｔ)                         | 三浦半島 / 葉山芝崎   | 0-3 枚    | 0.4-2kg     | －        | https://funaduri.jp/fish.cgi?fish=hirame    |
-| ヒラメ         | ゆうせい丸船(13.8ﾄﾝ)                     | 相模湾 / 湘南片瀬    | 0-3 枚    | 0.5-1.5kg   | －        | https://funaduri.jp/fish.cgi?fish=hirame    |
-| マゴチ         | 一之瀬丸船(13ﾄﾝ)                        | 横浜 / 金沢八景     | X-7 尾    | 3X-6Xcm     | ぎょさん     | https://funaduri.jp/fish.cgi?fish=magoti    |
-| マダイ         | 弘漁丸船(19ﾄﾝ,4.9ﾄﾝ)                   | 北茨城 / 久慈      | 0-8 尾    | 0.3-2kg     | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 昭栄丸船(19ﾄﾝ)                         | 茨城 / 大洗       | 0-8 尾    | 0.5-3.4kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 藤富丸船(12ﾄﾝ)                         | 茨城 / 大洗       | 0-4 尾    | 26-75cm     | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 大春丸船(5ﾄﾝ)                          | 茨城 / 鹿島       | 0-8 尾    | 0.40-4.36kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 長岡丸船(18ﾄﾝ)                         | 茨城 / 鹿島       | 0-4 尾    | 0.30-4.13kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 東丸船(12ﾄﾝ)                          | 内房 / 保田       | X-3 尾    | 0.7-3.5kg   | SANSPO   | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 米元釣船店船(13ﾄﾝ)                       | 横浜 / 金沢八景     | 0-1 尾    | 0.5-2.4kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 野毛屋釣船店船(16ﾄﾝ)                      | 横浜 / 金沢八景     | X-1 尾    | 1.8-2kg     | ぎょさん     | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 一之瀬丸船(13ﾄﾝ)                        | 横浜 / 金沢八景     | X-2 尾    | 0.5-2.0kg   | ぎょさん     | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | あまさけや丸船(13ﾄﾝ)                      | 三浦半島 / 剣崎松輪   | 0-4 尾    | 0.8-3.6kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダコ         | ゆうせい丸船(13.8ﾄﾝ)                     | 相模湾 / 湘南片瀬    | 0-3 杯    | 0.2-1.9kg   | －        | https://funaduri.jp/fish.cgi?fish=madako    |
-| マハタ         | 信照丸船(18.5x3.7m)                    | 外房 / 勝浦松部     | 0-4 尾    | 0.6-1.9kg   | －        | https://funaduri.jp/fish.cgi?fish=mahata    |
-| マルイカ        | 一之瀬丸船(13ﾄﾝ)                        | 横浜 / 金沢八景     | 3-4X 杯   | 1X-3Xcm     | ぎょさん     | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | 山天丸船(19ﾄﾝ)                         | 三浦半島 / 久比里    | 3-3X 杯   | 1X-2Xcm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | はら丸                                | 三浦半島 / 長井     | 10-24 杯  | 14-30cm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | 五エム丸船(19ｔ)                         | 三浦半島 / 葉山芝崎   | 3-25 杯   | 15-26cm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | 愛正丸船(17ﾄﾝ,11.5ﾄﾝ,9.1ﾄﾝ)            | 三浦半島 / 葉山あぶずり | 1-17 杯   | 15-27cm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | たいぞう丸船(12ﾄﾝ)                       | 三浦半島 / 葉山あぶずり | 1-4X 杯   | 1X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
-| メジナ         | ゆうせい丸船(13.8ﾄﾝ)                     | 相模湾 / 湘南片瀬    | 0-7 尾    | 0.5-1kg     | －        | https://funaduri.jp/fish.cgi?fish=mezina    |
-| ヤリイカ        | しまや丸船(13ﾄﾝ)                        | 南房 / 乙浜       | 4-2X 杯   | 3X-4Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=yariika   |
-| ワラサ         | 不動丸船(19ﾄﾝ)                         | 茨城 / 鹿島       | X-5 尾    | 3.1X-5.0Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=warasa    |
-| アジ          | 清勝丸船(19ﾄﾝ,19ﾄﾝ,5ﾄﾝ)                | 外房 / 飯岡       | 0-3X 尾   | 2X-3Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 宝生丸船(11ﾄﾝ)                         | 内房 / 勝山       | 7-14 尾   | 24-35cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 利八丸船(19ﾄﾝ)                         | 内房 / 勝山       | 5-25 尾   | 23-32cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | さえむ丸                               | 内房 / 金谷       | 0-1X 尾   | 4X-5Xcm     | マリネス     | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 勘次郎丸船(8.5ﾄﾝ)                       | 内房 / 金谷       | 1X-2X 尾  | 2X-4Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | こなや丸                               | 内房 / 長浦       | 25-13X 尾 | 1X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 守山丸船(16ﾄﾝ)                         | 東京湾奥 / 千葉寒川   | 1X-6X 尾  | 1X-2Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 西野屋                                | 東京湾奥 / 行徳     | 1-31 尾   | 15-24cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 伊藤遊船船(20m)                         | 東京湾奥 / 行徳     | 1X-4X 尾  | 1X-3Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 林遊船船(5ﾄﾝ)                          | 東京湾奥 / 行徳     | 34-11X 尾 | 1X-2Xcm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 吉野屋船(8ﾄﾝ)                          | 東京湾奥 / 浦安     | 1X-8X 尾  | 1X-2Xcm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 吉久船(19ﾄﾝ)                          | 東京湾奥 / 浦安     | 32-82 尾  | 18-30cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 船宿豆や船(14ﾄﾝ)                        | 東京湾奥 / 新中川鹿本橋 | 20-51 尾  | 20-36cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 須原屋船(19ﾄﾝ)                         | 東京湾奥 / 東葛西    | 5-50 尾   | 16-25cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 第二泉水                               | 東京湾奥 / 葛西橋    | 18-84 尾  | 16-29cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | ひらい丸船(17.5ﾄﾝ)                      | 東京湾奥 / 品川     | 10-41 尾  | 16-28cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 和彦丸船(12ﾄﾝ)                         | 東京湾奥 / 品川     | 10-42 尾  | 18-24cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | いわた釣船船(19ﾄﾝ,13ﾄﾝ,13ﾄﾝ)             | 東京湾奥 / 立会川    | 7-58 尾   | 15-35cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | ミナミ釣船船(15ﾄﾝ)                       | 東京湾奥 / 羽田     | 7-2X 尾   | 1X-2Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | かめだや船(16ﾄﾝ)                        | 東京湾奥 / 羽田     | 17-93 尾  | 16-32cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 広島屋船(16ﾄﾝ)                         | 横浜 / 新山下      | 8-4X 尾   | 1X-2Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 黒川本家船(18ﾄﾝ,18ﾄﾝ,17ｔ)               | 横浜 / 新山下      | 9-6X 尾   | 1X-3Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 打木屋釣船店船(13ﾄﾝ)                      | 横浜 / 新山下      | 5-2X 尾   | 1X-2Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 粂丸                                 | 横浜 / 新山下      | 5-60 尾   | 15-26cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 長崎屋船(15ﾄﾝ)                         | 横浜 / 本牧       | 26-87 尾  | 16-27cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | はやぶさ丸船(17ﾄﾝ)                       | 横浜 / 小柴       | 1X-5X 尾  | 2X-4Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 進丸船(15ﾄﾝ,12ﾄﾝ)                     | 横浜 / 金沢漁港     | 1-1X 尾   | 1X-2Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 青田丸船(12ﾄﾝ)                         | 横浜 / 金沢漁港     | 18-25 尾  | 23-32cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 黒一丸船(14ﾄﾝ)                         | 横浜 / 金沢漁港     | 25-120 尾 | 15-30cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 仁春丸船(6.6ﾄﾝ)                        | 横浜 / 金沢漁港     | 24-50 尾  | 18-47cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 忠彦丸船(19ﾄﾝ)                         | 横浜 / 金沢漁港     | 2-54 尾   | 17-28cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 仁丸船(12ﾄﾝ)                          | 横浜 / 金沢漁港     | 5-49 尾   | 16-32cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 米元釣船店船(13ﾄﾝ)                       | 横浜 / 金沢八景     | 29-72 尾  | 18-27cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 黒川丸船(12ﾄﾝ)                         | 横浜 / 金沢八景     | 8-56 尾   | 17-26cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 荒川屋船(13ﾄﾝ)                         | 横浜 / 金沢八景     | 7-36 尾   | 18-22cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 村本海事船(15m)                         | 横浜 / 金沢八景     | 1X-4X 尾  | 1X-2Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 小川丸船(19.9ﾄﾝ)                       | 三浦半島 / 大津     | 25-76 尾  | 20-40cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 関義丸船(16ﾄﾝ)                         | 三浦半島 / 走水     | 16-82 尾  | 22-36cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 政信丸船(5ﾄﾝ)                          | 三浦半島 / 走水     | 25-44 尾  | 22-41cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 海福丸船(15ﾄﾝ)                         | 三浦半島 / 走水     | 9-60 尾   | 20-35cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 吉明丸船(17ﾄﾝ)                         | 三浦半島 / 走水     | 8-4X 尾   | 2X-4Xcm     | マリネス     | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 健洋丸船(15ﾄﾝ)                         | 三浦半島 / 走水     | 35-55 尾  | 20-33cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 教至丸船(12ﾄﾝ)                         | 三浦半島 / 走水     | 30-93 尾  | 20-35cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 五郎丸船(13ﾄﾝ,13ﾄﾝ)                    | 三浦半島 / 鴨居     | 20-62 尾  | 24-42cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | おかだ丸                               | 三浦半島 / 鴨居     | 8-4X 尾   | 2X-3Xcm     | マリネス     | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 山下丸船(19ﾄﾝ)                         | 三浦半島 / 久比里    | 23-73 尾  | 23-42cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 巳之助丸                               | 三浦半島 / 久比里    | 53-123 尾 | 22-40cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 大松丸船(19.9ﾄﾝ,19.9ﾄﾝ)                | 三浦半島 / 剣崎松輪   | 30-10X 尾 | 2X-4Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 成銀丸船(19.9ﾄﾝ,19ﾄﾝ)                  | 三浦半島 / 剣崎松輪   | 7-55 尾   | 20-45cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 丸伊丸船(8.5ﾄﾝ)                        | 三浦半島 / 長井荒崎   | 3-10 尾   | 18-35cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 愛正丸船(17ﾄﾝ,11.5ﾄﾝ,9.1ﾄﾝ)            | 三浦半島 / 葉山あぶずり | 8-36 尾   | 26-40cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 椿丸船(4.8ﾄﾝ)                         | 三浦半島 / 小坪     | 2-6 尾    | 25-28cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 池田丸船(20ﾄﾝ)                         | 相模湾 / 腰越      | 0-9 尾    | 20-38cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 島きち丸船(19ﾄﾝ)                        | 相模湾 / 湘南片瀬    | 1X-3X 尾  | 2X-4Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | ちがさき丸船(17ﾄﾝ)                       | 相模湾 / 茅ヶ崎     | 10-31 尾  | 17-38cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | まごうの丸船(17ﾄﾝ)                       | 相模湾 / 茅ヶ崎     | 13-36 尾  | 23-40cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 庄治郎丸船(19ｔ)                         | 相模湾 / 平塚      | 4-40 尾   | 22-39cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 豊漁丸船(11ﾄﾝ)                         | 相模湾 / 平塚      | 1-1X 尾   | 2X-4Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 庄三郎丸                               | 相模湾 / 平塚      | 0-2 尾    | 0.8-1.5kg   | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 平安丸                                | 相模湾 / 小田原     | 1X-4X 尾  | 2X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アジ          | 八隆丸船(11ﾄﾝ)                         | 相模湾 / 小田原     | 3-8 尾    | 24-35cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
-| アナゴ         | 吉野屋船(8ﾄﾝ)                          | 東京湾奥 / 浦安     | 0-3X 本   | 2X-4Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=anago     |
-| アマダイ        | 喜久丸船(13ﾄﾝ)                         | 相模湾 / 腰越      | X-1 尾    | 2X-3Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=amadai    |
-| アマダイ        | 池田丸船(20ﾄﾝ)                         | 相模湾 / 腰越      | 0-2 尾    | 22-38cm     | －        | https://funaduri.jp/fish.cgi?fish=amadai    |
-| アマダイ        | まごうの丸船(17ﾄﾝ)                       | 相模湾 / 茅ヶ崎     | 0-4 尾    | 20-34cm     | －        | https://funaduri.jp/fish.cgi?fish=amadai    |
-| アラ          | 政勝丸船(8.5ﾄﾝ)                        | 外房 / 外川       | 1-2 尾    | 0.50-5.00kg | －        | https://funaduri.jp/fish.cgi?fish=ara       |
-| イサキ         | 勇幸丸                                | 外房 / 片貝       | 13-45 尾  | 21-37cm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
-| イサキ         | 義丸船(19m)                           | 外房 / 御宿岩和田    | 2X-5X 尾  | 2X-3Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=isaki     |
-| イサキ         | 大栄丸船(9ﾄﾝ)                          | 南房 / 天津小湊     | 1X-3X 尾  | 1X-3Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=isaki     |
-| イサキ         | 佐衛美丸船(7.3ﾄﾝ)                       | 南房 / 洲崎       | 15-50 尾  | 23-37cm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
-| イサキ         | 早川丸船(18ﾄﾝ)                         | 南房 / 洲崎       | 20-50 尾  | 25-36cm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
-| イサキ         | 宝生丸船(11ﾄﾝ)                         | 内房 / 勝山       | 22-53 尾  | 20-31cm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
-| イサキ         | 利八丸船(19ﾄﾝ)                         | 内房 / 勝山       | 3-15 尾   | 22-37cm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
-| イサキ         | 丸伊丸船(8.5ﾄﾝ)                        | 三浦半島 / 長井荒崎   | 6-20 尾   | 18-25cm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
-| イサキ         | よしひさ丸                              | 相模湾 / 福浦      | 1-15 尾   | 25-35cm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
-| イサキ         | つちそう丸船(19ﾄﾝ)                       | 東伊豆 / 網代      | 3X-6X 尾  | 2X-3Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=isaki     |
-| イサキ         | 安菜丸船(3.4ｔ)                         | 東伊豆 / 網代      | 10-10 尾  | 25-30cm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
-| イサキ         | 加納丸                                | 東伊豆 / 伊東      | 5-30 尾   | 25-38cm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
-| イサキ         | 久寿丸船(13ﾄﾝ)                         | 南伊豆 / 下田須崎    | 30-89 尾  | 27-35cm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
-| イサキ         | なごみ丸                               | 西伊豆 / 松崎      | 2X-3X 尾  | 2X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
-| イサキ         | 風神丸船(4.9ｔ)                         | 駿河湾 / 焼津      | 2X-3X 尾  | 2X-3Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=isaki     |
-| イシナギ        | 政勝丸船(8.5ﾄﾝ)                        | 外房 / 外川       | 0-1 尾    | 5.2-11kg    | －        | https://funaduri.jp/fish.cgi?fish=isinagi   |
-| イシモチ        | 岩田屋船(15ﾄﾝ)                         | 東京湾奥 / 浦安     | 1X-3X 尾  | 1X-3Xcm     | ぎょさん     | https://funaduri.jp/fish.cgi?fish=isimoti   |
-| イシモチ        | 小柴丸                                | 横浜 / 金沢八景     | 2-14 尾   | 20-32cm     | －        | https://funaduri.jp/fish.cgi?fish=isimoti   |
-| イシモチ        | 黒川丸船(12ﾄﾝ)                         | 横浜 / 金沢八景     | 2-23 尾   | 24-33cm     | －        | https://funaduri.jp/fish.cgi?fish=isimoti   |
-| イナダ         | ことぶき丸船(5ﾄﾝ)                        | 北茨城 / 会瀬      | 0-6 尾    | 40-70cm     | －        | https://funaduri.jp/fish.cgi?fish=inada     |
-| 沖メバル        | 太郎丸船(17ﾄﾝ)                         | 三浦半島 / 小坪     | 10-30 尾  | 25-40cm     | －        | https://funaduri.jp/fish.cgi?fish=okimebaru |
-| 沖カサゴ        | 秀作丸                                | 伊豆諸島 / 大島岡田   | -1X 尾    | 2X-5Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=okikasago |
-| オニカサゴ       | えさ政釣船店                             | 東京湾奥 / 羽田     | 0-3 尾    | 25-28cm     | －        | https://funaduri.jp/fish.cgi?fish=onikasago |
-| オニカサゴ       | かみや                                | 東京湾奥 / 羽田     | 0-3 尾    | 27-38cm     | －        | https://funaduri.jp/fish.cgi?fish=onikasago |
-| オニカサゴ       | えいあん丸船(18ﾄﾝ,14.5ﾄﾝ)                | 三浦半島 / 三崎     | X-5 尾    | 0.3-1.1kg   | SANSPO   | https://funaduri.jp/fish.cgi?fish=onikasago |
-| オニカサゴ       | 孝漁丸船(4.9ﾄﾝ)                        | 三浦半島 / 長井新宿   | 0-1 尾    | 1.00-1.50kg | －        | https://funaduri.jp/fish.cgi?fish=onikasago |
-| オニカサゴ       | 坂口丸船(19ﾄﾝ,13ﾄﾝ,11ﾄﾝ)               | 相模湾 / 小田原     | X-2 尾    | 0.3X-0.8Xkg | SANSPO   | https://funaduri.jp/fish.cgi?fish=onikasago |
-| カサゴ         | ことぶき丸船(5ﾄﾝ)                        | 北茨城 / 会瀬      | 0-4 尾    | 25-30cm     | －        | https://funaduri.jp/fish.cgi?fish=kasago    |
-| カサゴ         | 利喜丸船(13ﾄﾝ)                         | 茨城 / 鹿島       | 0-5 尾    | 22-45cm     | －        | https://funaduri.jp/fish.cgi?fish=kasago    |
-| カサゴ         | 吉野屋船(8ﾄﾝ)                          | 東京湾奥 / 浦安     | 1X-1X 尾  | 1X-2Xcm     | －        | https://funaduri.jp/fish.cgi?fish=kasago    |
-| カサゴ         | 新修丸                                | 横浜 / 金沢八景     | 2X-4X 尾  | 1X-2Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=kasago    |
-| カサゴ         | 村本海事船(15m)                         | 横浜 / 金沢八景     | 1X-2X 尾  | 2X-2Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=kasago    |
-| カサゴ         | みのる丸                               | 三浦半島 / 浦賀     | 8-18 尾   | 12-25cm     | －        | https://funaduri.jp/fish.cgi?fish=kasago    |
-| カサゴ         | 山下丸船(19ﾄﾝ)                         | 三浦半島 / 久比里    | 30-57 尾  | 16-27cm     | －        | https://funaduri.jp/fish.cgi?fish=kasago    |
-| カサゴ         | 孝太郎丸船(8.5ﾄﾝ)                       | 相模湾 / 腰越      | 2-41 尾   | 16-26cm     | －        | https://funaduri.jp/fish.cgi?fish=kasago    |
-| カワハギ        | 山下丸船(19ﾄﾝ)                         | 三浦半島 / 久比里    | 3-19 尾   | 14-28cm     | －        | https://funaduri.jp/fish.cgi?fish=kawahagi  |
-| カワハギ        | 山天丸船(19ﾄﾝ)                         | 三浦半島 / 久比里    | 7-8 尾    | 16-26.5cm   | －        | https://funaduri.jp/fish.cgi?fish=kawahagi  |
-| カワハギ        | 巳之助丸                               | 三浦半島 / 久比里    | 2-16 尾   | 17-33.5cm   | －        | https://funaduri.jp/fish.cgi?fish=kawahagi  |
-| カワハギ        | 儀兵衛丸船(14ﾄﾝ,9.1ﾄﾝ)                  | 三浦半島 / 長井     | X-5 尾    | 1X-2X.5cm   | －        | https://funaduri.jp/fish.cgi?fish=kawahagi  |
-| カンパチ        | 作栄丸船(5ﾄﾝ)                          | 外房 / 勝浦大沢     | 1 尾      | 1.5kg       | －        | https://funaduri.jp/fish.cgi?fish=kanpati   |
-| カンパチ        | 龍正丸船(19ﾄﾝ)                         | 南伊豆 / 下田須崎    | 0-3 尾    | 5-19.64kg   | －        | https://funaduri.jp/fish.cgi?fish=kanpati   |
-| キントキ        | 秀作丸                                | 伊豆諸島 / 大島岡田   | 1 尾      | 4Xcm        | SANSPO   | https://funaduri.jp/fish.cgi?fish=kintoki   |
-| キンメ         | 二三丸船(14ﾄﾝ)                         | 外房 / 片貝       | 1X-3X 尾  | 2X-3Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=kinme     |
-| キンメ         | 晃山丸船(14ﾄﾝ,12ﾄﾝ)                    | 東伊豆 / 稲取      | X-3 尾    | 2X-4Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=kinme     |
-| キンメ         | 宝栄丸船(19ﾄﾝ,13ﾄﾝ)                    | 南伊豆 / 下田須崎    | 0-4 尾    | 0.6-1.7kg   | －        | https://funaduri.jp/fish.cgi?fish=kinme     |
-| クロダイ        | 林遊船船(5ﾄﾝ)                          | 東京湾奥 / 行徳     | 1-9 尾    | 35-47cm     | －        | https://funaduri.jp/fish.cgi?fish=kurodai   |
-| クロダイ        | 黒川丸船(19ﾄﾝ)                         | 三浦半島 / 久里浜    | 0-11 尾   | 33-48cm     | －        | https://funaduri.jp/fish.cgi?fish=kurodai   |
-| クロダイ        | かりゆし丸船(6.6ﾄﾝ)                      | 相模湾 / 平塚      | 1 尾      | 1.4Xkg      | 釣割       | https://funaduri.jp/fish.cgi?fish=kurodai   |
-| クロダイ        | 庄治郎丸船(19ｔ)                         | 相模湾 / 平塚      | 0-1 尾    | 0.8-1.5kg   | －        | https://funaduri.jp/fish.cgi?fish=kurodai   |
-| クロムツ        | 第三新生合同丸船(17ｔ)                      | 南房 / 鴨川       | 3-1X 尾   | 2X-4Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=kuromutu  |
-| クロムツ        | ゆうせい丸船(13.8ﾄﾝ)                     | 相模湾 / 湘南片瀬    | 0-5 尾    | 28-38cm     | －        | https://funaduri.jp/fish.cgi?fish=kuromutu  |
-| サバ          | 椿丸船(4.8ﾄﾝ)                         | 三浦半島 / 小坪     | 5-1X 尾   | 3X-4Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=saba      |
-| サバ          | 島きち丸船(19ﾄﾝ)                        | 相模湾 / 湘南片瀬    | 10-21 尾  | 28-32cm     | －        | https://funaduri.jp/fish.cgi?fish=saba      |
-| シーバス        | 林遊船船(5ﾄﾝ)                          | 東京湾奥 / 行徳     | 3-15 尾   | 45-68cm     | －        | https://funaduri.jp/fish.cgi?fish=seabuss   |
-| ショウサイフグ     | 福重丸                                | 茨城 / 大洗       | 14-43 尾  | 18-36cm     | －        | https://funaduri.jp/fish.cgi?fish=fugu      |
-| ショウサイフグ     | きよ丸船(5ﾄﾝ)                          | 茨城 / 大洗       | 4-25 尾   | 17-42cm     | －        | https://funaduri.jp/fish.cgi?fish=fugu      |
-| ショウサイフグ     | 弘清丸船(16ﾄﾝ)                         | 茨城 / 大洗       | 4-24 尾   | 22-37cm     | －        | https://funaduri.jp/fish.cgi?fish=fugu      |
-| ショウサイフグ     | 不動丸船(19ﾄﾝ)                         | 茨城 / 鹿島       | 1-2X 尾   | 2X-4Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=fugu      |
-| ショウサイフグ     | 利喜丸船(13ﾄﾝ)                         | 茨城 / 鹿島       | 6-1X 尾   | 2X-4Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=fugu      |
-| ショウサイフグ     | 隆正丸船(19ｔ)                          | 外房 / 飯岡       | 1-10 尾   | 25-43cm     | －        | https://funaduri.jp/fish.cgi?fish=fugu      |
-| ショウサイフグ     | 敷嶋丸船(17ﾄﾝ)                         | 外房 / 大原       | 4-1X 尾   | 1X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=fugu      |
-| ショウサイフグ     | 吉久船(19ﾄﾝ)                          | 東京湾奥 / 浦安     | 0-11 尾   | 21-34cm     | －        | https://funaduri.jp/fish.cgi?fish=fugu      |
-| ショウサイフグ     | 丸裕船(7ﾄﾝ)                           | 東京湾奥 / 品川     | 0-3 尾    | 16-32cm     | －        | https://funaduri.jp/fish.cgi?fish=fugu      |
-| ショウサイフグ     | えさ政釣船店                             | 東京湾奥 / 羽田     | 0-10 尾   | 22-35cm     | －        | https://funaduri.jp/fish.cgi?fish=fugu      |
-| ショウサイフグ     | 忠彦丸船(19ﾄﾝ)                         | 横浜 / 金沢漁港     | 0-1X 尾   | 1X-3Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=fugu      |
-| ショウサイフグ     | 池田丸船(20ﾄﾝ)                         | 相模湾 / 腰越      | 0-8 尾    | 26-33cm     | －        | https://funaduri.jp/fish.cgi?fish=fugu      |
-| シマアジ        | 爪木丸船(16ﾄﾝ)                         | 南伊豆 / 下田須崎    | X-1 尾    | 1.2-2kg     | SANSPO   | https://funaduri.jp/fish.cgi?fish=simaaji   |
-| シマアジ        | 増福丸船(7.9ﾄﾝ)                        | 駿河湾 / 御前崎     | X-1 尾    | 5X-5Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=simaaji   |
-| シロギス        | 宮川丸船(18ﾄﾝ,12ﾄﾝ,4.8ﾄﾝ)              | 内房 / 木更津      | 1X-8X 尾  | 1X-2Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=kisu      |
-| シロギス        | 守山丸船(16ﾄﾝ)                         | 東京湾奥 / 千葉寒川   | 1X-1X 尾  | 1X-2Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=kisu      |
-| シロギス        | 吉野屋船(8ﾄﾝ)                          | 東京湾奥 / 浦安     | 10-149 尾 | 12-22cm     | －        | https://funaduri.jp/fish.cgi?fish=kisu      |
-| シロギス        | 船宿豆や船(14ﾄﾝ)                        | 東京湾奥 / 新中川鹿本橋 | 10-81 尾  | 12-23cm     | －        | https://funaduri.jp/fish.cgi?fish=kisu      |
-| シロギス        | 須原屋船(19ﾄﾝ)                         | 東京湾奥 / 東葛西    | 0-9X 尾   | 1X-2Xcm     | －        | https://funaduri.jp/fish.cgi?fish=kisu      |
-| シロギス        | 第二泉水                               | 東京湾奥 / 葛西橋    | 10-100 尾 | 13-23cm     | －        | https://funaduri.jp/fish.cgi?fish=kisu      |
-| シロギス        | ひらい丸船(17.5ﾄﾝ)                      | 東京湾奥 / 品川     | 5-22 尾   | 12-21cm     | －        | https://funaduri.jp/fish.cgi?fish=kisu      |
-| シロギス        | 三河屋船(13ﾄﾝ)                         | 東京湾奥 / 品川     | 0-69 尾   | 12-23cm     | －        | https://funaduri.jp/fish.cgi?fish=kisu      |
-| シロギス        | いわた釣船船(19ﾄﾝ,13ﾄﾝ,13ﾄﾝ)             | 東京湾奥 / 立会川    | 8-30 尾   | 13-24cm     | －        | https://funaduri.jp/fish.cgi?fish=kisu      |
-| シロギス        | かめだや船(16ﾄﾝ)                        | 東京湾奥 / 羽田     | 13-53 尾  | 12-23cm     | －        | https://funaduri.jp/fish.cgi?fish=kisu      |
-| シロギス        | 新明丸船(15ﾄﾝ)                         | 横浜 / 鶴見       | 30-12X 尾 | 1X-2Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=kisu      |
-| シロギス        | 広島屋船(16ﾄﾝ)                         | 横浜 / 新山下      | 8-13X 尾  | 1X-2Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=kisu      |
-| シロギス        | 打木屋釣船店船(13ﾄﾝ)                      | 横浜 / 新山下      | 8-4X 尾   | 1X-2Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=kisu      |
-| シロギス        | 長崎屋船(15ﾄﾝ)                         | 横浜 / 本牧       | 10-115 尾 | 13-23cm     | －        | https://funaduri.jp/fish.cgi?fish=kisu      |
-| シロギス        | 進丸船(15ﾄﾝ,12ﾄﾝ)                     | 横浜 / 金沢漁港     | 7-3X 尾   | 1X-2Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=kisu      |
-| シロギス        | 忠彦丸船(19ﾄﾝ)                         | 横浜 / 金沢漁港     | 2-3X 尾   | 1X-2Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=kisu      |
-| シロギス        | 黒川丸船(12ﾄﾝ)                         | 横浜 / 金沢八景     | 10-32 尾  | 17-24cm     | －        | https://funaduri.jp/fish.cgi?fish=kisu      |
-| シロギス        | 荒川屋船(13ﾄﾝ)                         | 横浜 / 金沢八景     | 4-34 尾   | 15-22cm     | －        | https://funaduri.jp/fish.cgi?fish=kisu      |
-| スルメイカ       | 儀兵衛丸船(14ﾄﾝ,9.1ﾄﾝ)                  | 三浦半島 / 長井     | 1X-3X 杯  | 2X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=surumeika |
-| スルメイカ       | はら丸                                | 三浦半島 / 長井     | 8-33 杯   | 20-35cm     | －        | https://funaduri.jp/fish.cgi?fish=surumeika |
-| スルメイカ       | 飯岡丸船(13ﾄﾝ)                         | 相模湾 / 腰越      | 1-19 杯   | 18-25cm     | －        | https://funaduri.jp/fish.cgi?fish=surumeika |
-| タイ          | 嘉丸船(14ﾄﾝ)                          | 東伊豆 / 宇佐美     | 6 尾      | 1.0-1.5kg   | 入れ食い     | https://funaduri.jp/fish.cgi?fish=tai       |
-| タチウオ        | ひらの丸                               | 内房 / 富津       | 0-4 本    | 70-103cm    | －        | https://funaduri.jp/fish.cgi?fish=tatiuo    |
-| タチウオ        | こなや丸                               | 内房 / 長浦       | X-5 本    | 70-11Xcm    | －        | https://funaduri.jp/fish.cgi?fish=tatiuo    |
-| タチウオ        | 吉野屋船(8ﾄﾝ)                          | 東京湾奥 / 浦安     | X-5 本    | 70-10Xcm    | －        | https://funaduri.jp/fish.cgi?fish=tatiuo    |
-| タチウオ        | 吉久船(19ﾄﾝ)                          | 東京湾奥 / 浦安     | 0-8 本    | 65-118cm    | －        | https://funaduri.jp/fish.cgi?fish=tatiuo    |
-| タチウオ        | 蒲谷丸船(12ﾄﾝ,4.9ﾄﾝ)                   | 横浜 / 金沢漁港     | 0-4 本    | 70-95cm     | －        | https://funaduri.jp/fish.cgi?fish=tatiuo    |
-| タチウオ        | 忠彦丸船(19ﾄﾝ)                         | 横浜 / 金沢漁港     | 0-1X 本   | 70-10Xcm    | 釣割       | https://funaduri.jp/fish.cgi?fish=tatiuo    |
-| タチウオ        | こうゆう丸船(19ﾄﾝ,16ﾄﾝ)                  | 三浦半島 / 新安浦    | 0-3 本    | 65-105cm    | －        | https://funaduri.jp/fish.cgi?fish=tatiuo    |
-| ハナダイ        | 宗和丸船(14ﾄﾝ,4.9ﾄﾝ)                   | 茨城 / 鹿島新      | 0-5 尾    | 0.3-0.7kg   | －        | https://funaduri.jp/fish.cgi?fish=hanadai   |
-| ハナダイ        | 太幸丸船(18ﾄﾝ)                         | 外房 / 飯岡       | 1X-2X 尾  | 2X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=hanadai   |
-| ハナダイ        | 隆正丸船(19ｔ)                          | 外房 / 飯岡       | 10-25 尾  | 25-38cm     | －        | https://funaduri.jp/fish.cgi?fish=hanadai   |
-| ハナダイ        | 龍鳳丸船(13ﾄﾝ)                         | 外房 / 飯岡       | 15-38 尾  | 18-32cm     | －        | https://funaduri.jp/fish.cgi?fish=hanadai   |
-| ハナダイ        | 勇幸丸                                | 外房 / 片貝       | X-7 尾    | 2X-3Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=hanadai   |
-| ハナダイ        | 新亀丸船(16ｔ)                          | 外房 / 片貝       | 18-40 尾  | 18-36cm     | －        | https://funaduri.jp/fish.cgi?fish=hanadai   |
-| ヒラマサ        | 不動丸船(19ﾄﾝ)                         | 茨城 / 鹿島       | 1 尾      | 2.1Xkg      | 釣割       | https://funaduri.jp/fish.cgi?fish=hiramasa  |
-| ヒラメ         | つる丸                                | 外房 / 大原       | X-3 枚    | 0.8-5.9Xkg  | SANSPO   | https://funaduri.jp/fish.cgi?fish=hirame    |
-| ヒラメ         | 愛正丸船(17ﾄﾝ,11.5ﾄﾝ,9.1ﾄﾝ)            | 三浦半島 / 葉山あぶずり | 0-1 枚    | 1.7-4.7kg   | －        | https://funaduri.jp/fish.cgi?fish=hirame    |
-| ヒラメ         | ゆうせい丸船(13.8ﾄﾝ)                     | 相模湾 / 湘南片瀬    | 0-3 枚    | 0.50-1.50kg | －        | https://funaduri.jp/fish.cgi?fish=hirame    |
-| ヒラメ         | 庄三郎丸                               | 相模湾 / 平塚      | 0-2 枚    | 0.8-2.0kg   | －        | https://funaduri.jp/fish.cgi?fish=hirame    |
-| ヒラメ         | 龍神丸                                | 駿河湾 / 由比      | 1-1 枚    | 1.0-1.0kg   | －        | https://funaduri.jp/fish.cgi?fish=hirame    |
-| ホウボウ        | 宗和丸船(14ﾄﾝ,4.9ﾄﾝ)                   | 茨城 / 鹿島新      | 1-5 尾    | 25-40cm     | －        | https://funaduri.jp/fish.cgi?fish=houbou    |
-| マゴチ         | 川崎丸船(17.5x3.8,18x4.3m)             | 内房 / 富津       | 0-1X 尾   | 3X-6X.1cm   | 関東沖釣り情報  | https://funaduri.jp/fish.cgi?fish=magoti    |
-| マゴチ         | 林遊船船(5ﾄﾝ)                          | 東京湾奥 / 行徳     | 0-2 尾    | 38-60cm     | －        | https://funaduri.jp/fish.cgi?fish=magoti    |
-| マゴチ         | かみや                                | 東京湾奥 / 羽田     | 0-2 尾    | 36-53cm     | －        | https://funaduri.jp/fish.cgi?fish=magoti    |
-| マゴチ         | 釣り船鶴船(13ﾄﾝ)                        | 東京湾奥 / 羽田     | 0-7 尾    | 48-56cm     | －        | https://funaduri.jp/fish.cgi?fish=magoti    |
-| マゴチ         | 新明丸船(15ﾄﾝ)                         | 横浜 / 鶴見       | 0-1X 尾   | 3X-5Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=magoti    |
-| マゴチ         | 濱生丸船(13ﾄﾝ)                         | 横浜 / 磯子八幡橋    | -8 尾     | -64cm       | －        | https://funaduri.jp/fish.cgi?fish=magoti    |
-| マゴチ         | 弁天屋船(17ﾄﾝ)                         | 横浜 / 金沢八景     | X-9 尾    | 3X-6Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=magoti    |
-| マダイ         | ことぶき丸船(5ﾄﾝ)                        | 北茨城 / 会瀬      | 1-7 尾    | 0.30-5.50kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 大貫丸船(18ﾄﾝ,5ﾄﾝ)                     | 北茨城 / 久慈      | 0-6 尾    | 0.30-1.00kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 日正丸船(17ﾄﾝ,16ﾄﾝ)                    | 北茨城 / 久慈      | 0-7 尾    | 0.3-3kg     | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 弘漁丸船(19ﾄﾝ,4.9ﾄﾝ)                   | 北茨城 / 久慈      | 0-8 尾    | 0.30-2.00kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 宮田丸船(5ﾄﾝ)                          | 北茨城 / 久慈      | 0-5 尾    | 0.10-1.00kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 釣友丸                                | 北茨城 / 久慈      | 1-6 尾    | 0.3-1kg     | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 昭栄丸船(19ﾄﾝ)                         | 茨城 / 大洗       | 0-8 尾    | 0.5-3.4kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 藤富丸船(12ﾄﾝ)                         | 茨城 / 大洗       | 0-4 尾    | 26-75cm     | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 大洗丸                                | 茨城 / 大洗       | 3-1X 尾   | 2X-6Xcm     | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 宗和丸船(14ﾄﾝ,4.9ﾄﾝ)                   | 茨城 / 鹿島新      | 0-3 尾    | 0.40-4.04kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 第五悌栄丸船(4.9ﾄﾝ)                      | 茨城 / 鹿島新      | X-8 尾    | 0.5X-2.6Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 清栄丸船(20ﾄﾝ,5ﾄﾝ)                     | 茨城 / 鹿島       | X-3 尾    | 0.5X-1.5Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 大春丸船(5ﾄﾝ)                          | 茨城 / 鹿島       | 1-10 尾   | 0.40-2.50kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 長岡丸船(18ﾄﾝ)                         | 茨城 / 鹿島       | 0-6 尾    | 1.20-4.83kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 植田丸船(14ﾄﾝ)                         | 茨城 / 鹿島       | 1 尾      | 1.50kg      | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 幸栄丸船(20ﾄﾝ)                         | 茨城 / 鹿島       | 0-7 尾    | 0.30-4.90kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 不動丸船(19ﾄﾝ)                         | 茨城 / 鹿島       | 0-6 尾    | 0.50-3.80kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 幸丸船(19ﾄﾝ,19ﾄﾝ,19ﾄﾝ,19ﾄﾝ,19ﾄﾝ,19ﾄﾝ) | 外房 / 飯岡       | 0-12 尾   | 0.3-1.1kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 梅花丸船(19ﾄﾝ,17ﾄﾝ)                    | 外房 / 飯岡       | 0-9 尾    | 0.30-1.50kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 優光丸船(16ﾄﾝ)                         | 外房 / 飯岡       | 0-15 尾   | 0.4-1.8kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 三次郎丸船(18ﾄﾝ)                        | 外房 / 飯岡       | 0-8 尾    | 0.30-2.40kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 新幸丸                                | 外房 / 大原       | X-4 尾    | 0.3-2.7kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 作栄丸船(5ﾄﾝ)                          | 外房 / 勝浦大沢     | 2-5 尾    | 0.50-1.70kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 大栄丸船(9ﾄﾝ)                          | 南房 / 天津小湊     | X-1 尾    | 1.0Xkg      | 釣割       | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 美吉丸船(4.7ﾄﾝ)                        | 南房 / 洲崎       | 0-3 尾    | 0.80-4.30kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 東丸船(12ﾄﾝ)                          | 内房 / 保田       | 1-3 尾    | 0.70-3.50kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 柊丸船(2.7ﾄﾝ)                         | 東京湾奥 / 行徳     | X-1 尾    | 2.1X-2.5Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 鴨下丸kawana船(13ﾄﾝ)                   | 横浜 / 磯子八幡橋    | X-6 尾    | 0.6-4kg     | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 米元釣船店船(13ﾄﾝ)                       | 横浜 / 金沢八景     | 0-1 尾    | 0.50-2.40kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 房丸船(14ﾄﾝ)                          | 三浦半島 / 鴨居     | 0-1 尾    | 0.50-1.00kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 網屋丸                                | 三浦半島 / 久里浜    | 0-3 尾    | 0.40-3.80kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 喜平治丸                               | 三浦半島 / 剣崎間口   | X-5 尾    | 0.6-2.5Xkg  | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 丸又丸船(4.9ﾄﾝ)                        | 三浦半島 / 剣崎間口   | X-2 尾    | 0.8-1.5kg   | SANSPO   | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 勇丸船(4.9ﾄﾝ)                         | 三浦半島 / 剣崎間口   | X-3 尾    | 0.6X-2.9Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 大松丸船(19.9ﾄﾝ,19.9ﾄﾝ)                | 三浦半島 / 剣崎松輪   | X-7 尾    | 0.8X-3.0Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | あまさけや丸船(13ﾄﾝ)                      | 三浦半島 / 剣崎松輪   | 0-4 尾    | 0.80-3.60kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 浜鈴丸船(5ﾄﾝ)                          | 三浦半島 / 剣崎松輪   | -4 尾     | -2.80kg     | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 棒面丸船(19.9ﾄﾝ)                       | 三浦半島 / 剣崎松輪   | 1-4 尾    | -3.00kg     | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 伝五郎丸船(17ﾄﾝ)                        | 三浦半島 / 剣崎松輪   | X-4 尾    | 0.8X-3.2Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 成銀丸船(19.9ﾄﾝ,19ﾄﾝ)                  | 三浦半島 / 剣崎松輪   | X-5 尾    | 0.5X-2.0Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 正海丸船(19ｔ)                          | 三浦半島 / 剣崎松輪   | X-3 尾    | 0.8X-4.0Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 秀吉丸                                | 三浦半島 / 葉山あぶずり | 0-1 尾    | 0.3-2.5kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | ちがさき丸船(17ﾄﾝ)                       | 相模湾 / 茅ヶ崎     | X-1 尾    | 0.4-0.5kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | かろうや丸船(5ﾄﾝ)                        | 東伊豆 / 熱海      | X-2 尾    | 1.0X-1.7Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 安菜丸船(3.4ｔ)                         | 東伊豆 / 網代      | 1 尾      | 0.8kg       | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 久寿丸船(13ﾄﾝ)                         | 南伊豆 / 下田須崎    | 0-1 尾    | 0.8-1.8kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 爪木丸船(16ﾄﾝ)                         | 南伊豆 / 下田須崎    | X-1 尾    | 0.8-1.5kg   | SANSPO   | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | 山大丸船(3.5ﾄﾝ)                        | 駿河湾 / 清水      | 0-1 尾    | 0.70-1.00kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダイ         | SHINSEIMARU船(15ｔ)                  | 駿河湾 / 清水      | 0-1 尾    | 0.80-1.50kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
-| マダコ         | つれたか丸                              | 茨城 / 那珂湊      | 0-2 杯    | 1.00-1.50kg | －        | https://funaduri.jp/fish.cgi?fish=madako    |
-| マダコ         | 川崎丸船(17.5x3.8,18x4.3m)             | 内房 / 富津       | X-6 杯    | 0.3-3.9kg   | 関東沖釣り情報  | https://funaduri.jp/fish.cgi?fish=madako    |
-| マダコ         | ゆうせい丸船(13.8ﾄﾝ)                     | 相模湾 / 湘南片瀬    | 0-3 杯    | 0.20-1.90kg | －        | https://funaduri.jp/fish.cgi?fish=madako    |
-| マハタ         | 隆光丸船(8.5ﾄﾝ)                        | 外房 / 大原       | X-2 尾    | 0.5X-2.8Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=mahata    |
-| マハタ         | 信照丸船(18.5x3.7m)                    | 外房 / 勝浦松部     | 0-4 尾    | 0.60-1.90kg | －        | https://funaduri.jp/fish.cgi?fish=mahata    |
-| マルイカ        | 寿々木丸船(9.7ﾄﾝ)                       | 南房 / 天津小湊     | 5-3X 杯   | 1X-4Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | 宝生丸船(11ﾄﾝ)                         | 内房 / 勝山       | 1-1X 杯   | 1X-2Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | 五郎丸船(13ﾄﾝ,13ﾄﾝ)                    | 三浦半島 / 鴨居     | 5-39 杯   | 13-30cm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | 山天丸船(19ﾄﾝ)                         | 三浦半島 / 久比里    | 3-36 杯   | 13-27cm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | 喜平治丸                               | 三浦半島 / 剣崎間口   | 1-3X 杯   | 1X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | あまさけや丸船(13ﾄﾝ)                      | 三浦半島 / 剣崎松輪   | 5-1X 杯   | 2Xcm        | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | 佐円丸船(18.9ﾄﾝ)                       | 三浦半島 / 三崎     | 8-3X 杯   | 1X-3Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | 大和丸船(14ﾄﾝ)                         | 三浦半島 / 小網代    | 4-4X 杯   | 1X-2Xcm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | 翔太丸船(13.5ﾄﾝ)                       | 三浦半島 / 小網代    | 2-2X 杯   | 1X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | やまはち丸船(18ﾄﾝ,14ﾄﾝ)                  | 三浦半島 / 小網代    | 1-1X 杯   | 1X-3Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | はら丸                                | 三浦半島 / 長井     | 10-24 杯  | 14-30cm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | 栃木丸船(16.7ﾄﾝ,7.9ﾄﾝ)                 | 三浦半島 / 長井     | 2-2X 杯   | 1X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | 春盛丸船(14ﾄﾝ)                         | 三浦半島 / 長井漆山   | 6-41 杯   | 13-30cm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | 光三丸船(13ﾄﾝ)                         | 三浦半島 / 長井漆山   | 0-2X 杯   | 1X-2Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | 秀吉丸                                | 三浦半島 / 葉山あぶずり | 2-35 杯   | 16-30cm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | 愛正丸船(17ﾄﾝ,11.5ﾄﾝ,9.1ﾄﾝ)            | 三浦半島 / 葉山あぶずり | 1-1X 杯   | 1X-2Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | たいぞう丸船(12ﾄﾝ)                       | 三浦半島 / 葉山あぶずり | 1-47 杯   | 14-30cm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | 多希志丸船(16ﾄﾝ)                        | 相模湾 / 腰越      | 6-32 杯   | 16-25cm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | まごうの丸船(17ﾄﾝ)                       | 相模湾 / 茅ヶ崎     | 2-27 杯   | 15-27cm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
-| マルイカ        | 庄治郎丸船(19ｔ)                         | 相模湾 / 平塚      | 2-4X 杯   | 2X-2Xcm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
-| ムギイカ        | 島きち丸船(19ﾄﾝ)                        | 相模湾 / 湘南片瀬    | 2-1X 杯   | 2X-3Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=mugiika   |
-| ムギイカ        | 坂口丸船(19ﾄﾝ,13ﾄﾝ,11ﾄﾝ)               | 相模湾 / 小田原     | 3X-5X 杯  | 1X-2Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=mugiika   |
-| ムギイカ        | 平安丸                                | 相模湾 / 小田原     | 2-40 杯   | 18-25cm     | －        | https://funaduri.jp/fish.cgi?fish=mugiika   |
-| ムギイカ        | 勝美丸船(10ﾄﾝ)                         | 相模湾 / 小田原     | 4-3X 杯   | 1X-2Xcm     | マリネス     | https://funaduri.jp/fish.cgi?fish=mugiika   |
-| ムギイカ        | 誠いち丸船(12ﾄﾝ)                        | 相模湾 / 真鶴      | 10-46 杯  | 12-28cm     | －        | https://funaduri.jp/fish.cgi?fish=mugiika   |
-| ムギイカ        | よしひさ丸                              | 相模湾 / 福浦      | 3-63 杯   | 13-30cm     | －        | https://funaduri.jp/fish.cgi?fish=mugiika   |
-| ムギイカ        | 勘栄丸                                | 駿河湾 / 沼津静浦    | 12-36 杯  | 15-30cm     | －        | https://funaduri.jp/fish.cgi?fish=mugiika   |
-| ムギイカ        | 清時丸                                | 駿河湾 / 沼津静浦    | 3X-6X 杯  | 1X-3Xcm     | マリネス     | https://funaduri.jp/fish.cgi?fish=mugiika   |
-| メジナ         | ゆうせい丸船(13.8ﾄﾝ)                     | 相模湾 / 湘南片瀬    | 0-7 尾    | 0.50-1.00kg | －        | https://funaduri.jp/fish.cgi?fish=mezina    |
-| メダイ         | 庄三郎丸                               | 相模湾 / 平塚      | 0-1 尾    | 2-2kg       | －        | https://funaduri.jp/fish.cgi?fish=medai     |
-| メダイ         | 光明丸                                | 南伊豆 / 下田須崎    | 12-24 尾  | 1.2-5.2kg   | －        | https://funaduri.jp/fish.cgi?fish=medai     |
-| メヌケ         | 仁徳丸船(18ﾄﾝ,15ﾄﾝ)                    | 茨城 / 波崎       | 0-1X 尾   | 0.5-4.1kg   | SANSPO   | https://funaduri.jp/fish.cgi?fish=menuke    |
-| メバル         | ことぶき丸船(5ﾄﾝ)                        | 北茨城 / 会瀬      | 0-2 尾    | 25-30cm     | －        | https://funaduri.jp/fish.cgi?fish=mebaru    |
-| メバル         | 仙昇丸船(20ﾄﾝ)                         | 茨城 / 那珂湊      | 6-19 尾   | 20-35cm     | －        | https://funaduri.jp/fish.cgi?fish=mebaru    |
-| ヤリイカ        | 不動丸船(14ﾄﾝ)                         | 外房 / 川津       | 30-97 杯  | 28-45cm     | －        | https://funaduri.jp/fish.cgi?fish=yariika   |
-| ヤリイカ        | 勝丸船(10ﾄﾝ)                          | 外房 / 勝浦       | 12-67 杯  | 30-43cm     | －        | https://funaduri.jp/fish.cgi?fish=yariika   |
-| ヤリイカ        | 第三新生合同丸船(17ｔ)                      | 南房 / 鴨川       | 1X-3X 杯  | 3X-4Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=yariika   |
-| ヤリイカ        | 甚四郎丸船(12ﾄﾝ)                        | 南房 / 白間津      | 5-22 杯   | 30-50cm     | －        | https://funaduri.jp/fish.cgi?fish=yariika   |
-| ヤリイカ        | しまや丸船(13ﾄﾝ)                        | 南房 / 乙浜       | 4-29 杯   | 30-50cm     | －        | https://funaduri.jp/fish.cgi?fish=yariika   |
-| ワラサ         | 釣友丸                                | 北茨城 / 久慈      | 1-4 尾    | 2.5-5kg     | －        | https://funaduri.jp/fish.cgi?fish=warasa    |
-| ワラサ         | 幸栄丸船(20ﾄﾝ)                         | 茨城 / 鹿島       | 0-2 尾    | 3.00-6.50kg | －        | https://funaduri.jp/fish.cgi?fish=warasa    |
-| ワラサ         | 不動丸船(19ﾄﾝ)                         | 茨城 / 鹿島       | 3-7 尾    | 2.40-3.40kg | －        | https://funaduri.jp/fish.cgi?fish=warasa    |
-| イカ          | 藤吉丸                                | 東伊豆 / 宇佐美     | 5-30 杯   | 25-55cm     | －        | https://funaduri.jp/fish.cgi?fish=ika       |
-| ウメイロ        | 久寿丸船(13ﾄﾝ)                         | 南伊豆 / 下田須崎    | 2-6 尾    | 0.7-1kg     | －        | https://funaduri.jp/fish.cgi?fish=umeiro    |
-| ムラソイ        | 大貫丸船(18ﾄﾝ,5ﾄﾝ)                     | 北茨城 / 久慈      | 0-1 尾    | 20-30cm     | －        | https://funaduri.jp/fish.cgi?fish=murasoi   |
+| fish_name   | yado                               | area_port   | choka    | size        | source   | url                                         |
+|:------------|:-----------------------------------|:------------|:---------|:------------|:---------|:--------------------------------------------|
+| アジ          | 大松丸船(19.9ﾄﾝ,19.9ﾄﾝ)                | 三浦半島 / 剣崎松輪 | 5X-6X 尾  | 2X-4Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=aji       |
+| キントキ        | しまや丸船(13ﾄﾝ)                        | 南房 / 乙浜     | X-8 尾    | 3X-4Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=kintoki   |
+| ショウサイフグ     | きよ丸船(5ﾄﾝ)                          | 茨城 / 大洗     | 3-2X 尾   | 1X-3Xcm     | マリネス     | https://funaduri.jp/fish.cgi?fish=fugu      |
+| マダイ         | 昭栄丸船(19ﾄﾝ)                         | 茨城 / 大洗     | 0-5 尾    | 0.3-2.2kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 大松丸船(19.9ﾄﾝ,19.9ﾄﾝ)                | 三浦半島 / 剣崎松輪 | X-6 尾    | 0.8X-4.0Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | あまさけや丸船(13ﾄﾝ)                      | 三浦半島 / 剣崎松輪 | 0-4 尾    | 0.8-1.8kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | ちがさき丸船(17ﾄﾝ)                       | 相模湾 / 茅ヶ崎   | X-1 尾    | 0.4-0.5kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| ムギイカ        | 清時丸                                | 駿河湾 / 沼津静浦  | 1X-4X 杯  | 2X-3Xcm     | マリネス     | https://funaduri.jp/fish.cgi?fish=mugiika   |
+| アオリイカ       | 丸伊丸船(8.5ﾄﾝ)                        | 三浦半島 / 長井荒崎 | 1-3 杯    | 0.40-1.13kg | －        | https://funaduri.jp/fish.cgi?fish=aori      |
+| アジ          | 健清丸船(8.5ﾄﾝ)                        | 茨城 / 大洗     | 3-8 尾    | 35-42cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 宝生丸船(11ﾄﾝ)                         | 内房 / 勝山     | 4-13 尾   | 24-36cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 利八丸船(19ﾄﾝ)                         | 内房 / 勝山     | 1X-3X 尾  | 2X-4Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 村井丸船(12ﾄﾝ,10ﾄﾝ)                    | 内房 / 保田     | 2-1X 尾   | 2X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 光進丸                                | 内房 / 金谷     | 0-5X 尾   | 2X-5Xcm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 勘次郎丸船(8.5ﾄﾝ)                       | 内房 / 金谷     | 14-86 尾  | 25-43cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 西野屋                                | 東京湾奥 / 行徳   | 20-56 尾  | 15-30cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 吉久船(19ﾄﾝ)                          | 東京湾奥 / 浦安   | 22-83 尾  | 18-29cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 須原屋船(19ﾄﾝ)                         | 東京湾奥 / 東葛西  | 30-80 尾  | 16-25cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 第二泉水                               | 東京湾奥 / 葛西橋  | 15-85 尾  | 16-28cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | かめだや船(16ﾄﾝ)                        | 東京湾奥 / 羽田   | 23-111 尾 | 17-32cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 小川丸船(19.9ﾄﾝ)                       | 三浦半島 / 大津   | 7-71 尾   | 20-40cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 関義丸船(16ﾄﾝ)                         | 三浦半島 / 走水   | 12-89 尾  | 20-36cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 政信丸船(5ﾄﾝ)                          | 三浦半島 / 走水   | 12-67 尾  | 20-44cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 海福丸船(15ﾄﾝ)                         | 三浦半島 / 走水   | 24-78 尾  | 20-38cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 教至丸船(12ﾄﾝ)                         | 三浦半島 / 走水   | 5-55 尾   | 20-43cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 五郎丸船(13ﾄﾝ,13ﾄﾝ)                    | 三浦半島 / 鴨居   | 8-54 尾   | 22-36cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 石川丸                                | 三浦半島 / 鴨居   | 15-67 尾  | 21-38cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 山下丸船(19ﾄﾝ)                         | 三浦半島 / 久比里  | 15-30 尾  | 24-38cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 巳之助丸                               | 三浦半島 / 久比里  | 20-118 尾 | 22-40cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 黒川丸船(19ﾄﾝ)                         | 三浦半島 / 久里浜  | 3X-9X 尾  | 2X-4Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 岩伊丸船(3.6ﾄﾝ)                        | 三浦半島 / 金田   | 30-50 尾  | 20-42cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 孫武丸船(9.7ﾄﾝ)                        | 三浦半島 / 剣崎間口 | 20-30 尾  | 23-35cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 大松丸船(19.9ﾄﾝ,19.9ﾄﾝ)                | 三浦半島 / 剣崎松輪 | 50-60 尾  | 25-45cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 成銀丸船(19.9ﾄﾝ,19ﾄﾝ)                  | 三浦半島 / 剣崎松輪 | 16-66 尾  | 20-43cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | ゆうせい丸船(13.8ﾄﾝ)                     | 相模湾 / 湘南片瀬  | 4-18 尾   | 21-38cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | ちがさき丸船(17ﾄﾝ)                       | 相模湾 / 茅ヶ崎   | 9-2X 尾   | 1X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | まごうの丸船(17ﾄﾝ)                       | 相模湾 / 茅ヶ崎   | 11-54 尾  | 23-40cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | かりゆし丸船(6.6ﾄﾝ)                      | 相模湾 / 平塚    | 8-2X 尾   | 2X-4Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 庄治郎丸船(19ｔ)                         | 相模湾 / 平塚    | 25-50 尾  | 20-39cm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 庄三郎丸                               | 相模湾 / 平塚    | 0-4 尾    | 0.8-1.5kg   | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | とうふや丸                              | 相模湾 / 大磯    | 1X-4X 尾  | 2X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アジ          | 平安丸                                | 相模湾 / 小田原   | 2X-4X 尾  | 2X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=aji       |
+| アナゴ         | 守山丸船(16ﾄﾝ)                         | 東京湾奥 / 千葉寒川 | 1X-3X 本  | 2X-4Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=anago     |
+| アマダイ        | 明進丸                                | 北茨城 / 久慈    | X-6 尾    | 3X-4Xcm     | －        | https://funaduri.jp/fish.cgi?fish=amadai    |
+| アマダイ        | 釣友丸                                | 北茨城 / 久慈    | 2-6 尾    | 35-45cm     | －        | https://funaduri.jp/fish.cgi?fish=amadai    |
+| アマダイ        | ひろの丸船(7.3ﾄﾝ)                       | 茨城 / 波崎     | 3-1X 尾   | 2X-4Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=amadai    |
+| アマダイ        | 幸丸船(19ﾄﾝ,19ﾄﾝ,19ﾄﾝ,19ﾄﾝ,19ﾄﾝ,19ﾄﾝ) | 外房 / 飯岡     | X-8 尾    | 2X-4Xcm     | －        | https://funaduri.jp/fish.cgi?fish=amadai    |
+| アラ          | 政勝丸船(8.5ﾄﾝ)                        | 外房 / 外川     | 0-2 尾    | 1.50-4.20kg | －        | https://funaduri.jp/fish.cgi?fish=ara       |
+| イサキ         | 佐衛美丸船(7.3ﾄﾝ)                       | 南房 / 洲崎     | 1X-5X 尾  | 2X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
+| イサキ         | 早川丸船(18ﾄﾝ)                         | 南房 / 洲崎     | 20-50 尾  | 25-36cm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
+| イサキ         | 宝生丸船(11ﾄﾝ)                         | 内房 / 勝山     | 10-31 尾  | 22-30cm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
+| イサキ         | 村井丸船(12ﾄﾝ,10ﾄﾝ)                    | 内房 / 保田     | 0-3X 尾   | 2X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
+| イサキ         | 志平丸船(16ﾄﾝ,13ﾄﾝ)                    | 三浦半島 / 佐島   | 7-2X 尾   | 1X-3Xcm     | 海釣り情報    | https://funaduri.jp/fish.cgi?fish=isaki     |
+| イサキ         | よしひさ丸                              | 相模湾 / 福浦    | 3-24 尾   | 25-35cm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
+| イサキ         | 安菜丸船(3.4ｔ)                         | 東伊豆 / 網代    | 10-15 尾  | 25-30cm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
+| イサキ         | 加納丸                                | 東伊豆 / 伊東    | 7-35 尾   | 25-38cm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
+| イサキ         | 光明丸                                | 南伊豆 / 下田須崎  | 62-88 尾  | 26-33cm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
+| イサキ         | 権助丸船(5ﾄﾝ)                          | 西伊豆 / 松崎    | 1X 尾     | 3X-3Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=isaki     |
+| イサキ         | SHINSEIMARU船(15ｔ)                  | 駿河湾 / 清水    | 8-14 尾   | 38-41cm     | －        | https://funaduri.jp/fish.cgi?fish=isaki     |
+| イシナギ        | 政勝丸船(8.5ﾄﾝ)                        | 外房 / 外川     | 0-1 尾    | 5-18kg      | －        | https://funaduri.jp/fish.cgi?fish=isinagi   |
+| イナダ         | ことぶき丸船(5ﾄﾝ)                        | 北茨城 / 会瀬    | 0-6 尾    | 40-60cm     | －        | https://funaduri.jp/fish.cgi?fish=inada     |
+| イナダ         | 健清丸船(8.5ﾄﾝ)                        | 茨城 / 大洗     | 0-2 尾    | 3.00-5.00kg | －        | https://funaduri.jp/fish.cgi?fish=inada     |
+| オナガダイ       | 久寿丸船(13ﾄﾝ)                         | 南伊豆 / 下田須崎  | 0-2 尾    | 1-1.8kg     | －        | https://funaduri.jp/fish.cgi?fish=onaga     |
+| オニカサゴ       | 三次郎丸船(18ﾄﾝ)                        | 外房 / 飯岡     | 0-2 尾    | 0.60-2.80kg | －        | https://funaduri.jp/fish.cgi?fish=onikasago |
+| カサゴ         | ことぶき丸船(5ﾄﾝ)                        | 北茨城 / 会瀬    | 0-1 尾    | 25-33cm     | －        | https://funaduri.jp/fish.cgi?fish=kasago    |
+| カサゴ         | 利喜丸船(13ﾄﾝ)                         | 茨城 / 鹿島     | 5-10 尾   | 0.5-1.5kg   | －        | https://funaduri.jp/fish.cgi?fish=kasago    |
+| カサゴ         | 山下丸船(19ﾄﾝ)                         | 三浦半島 / 久比里  | 25-31 尾  | 16-27cm     | －        | https://funaduri.jp/fish.cgi?fish=kasago    |
+| カワハギ        | 山下丸船(19ﾄﾝ)                         | 三浦半島 / 久比里  | 1-14 尾   | 16-34cm     | －        | https://funaduri.jp/fish.cgi?fish=kawahagi  |
+| カワハギ        | 山天丸船(19ﾄﾝ)                         | 三浦半島 / 久比里  | X-6 尾    | 1X-2Xcm     | －        | https://funaduri.jp/fish.cgi?fish=kawahagi  |
+| カワハギ        | 巳之助丸                               | 三浦半島 / 久比里  | 3-12 尾   | 18-31.5cm   | －        | https://funaduri.jp/fish.cgi?fish=kawahagi  |
+| キントキ        | しまや丸船(13ﾄﾝ)                        | 南房 / 乙浜     | 6-8 尾    | 30-42cm     | －        | https://funaduri.jp/fish.cgi?fish=kintoki   |
+| キンメ         | 晃山丸船(14ﾄﾝ,12ﾄﾝ)                    | 東伊豆 / 稲取    | 1X 尾     | 2X-4Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=kinme     |
+| クロダイ        | 黒川丸船(19ﾄﾝ)                         | 三浦半島 / 久里浜  | 0-1X 尾   | 3X-4Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=kurodai   |
+| クロダイ        | 平作丸船(19ﾄﾝ)                         | 三浦半島 / 久里浜  | 3-2X 尾   | 3X-4Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=kurodai   |
+| クロダイ        | 庄治郎丸船(19ｔ)                         | 相模湾 / 平塚    | 1 尾      | 0.5kg       | －        | https://funaduri.jp/fish.cgi?fish=kurodai   |
+| クロムツ        | 岩伊丸船(3.6ﾄﾝ)                        | 三浦半島 / 金田   | 1 尾      | 34cm        | －        | https://funaduri.jp/fish.cgi?fish=kuromutu  |
+| クロムツ        | ゆうせい丸船(13.8ﾄﾝ)                     | 相模湾 / 湘南片瀬  | 2-11 尾   | 28-42cm     | －        | https://funaduri.jp/fish.cgi?fish=kuromutu  |
+| サバ          | 健清丸船(8.5ﾄﾝ)                        | 茨城 / 大洗     | 5-38 尾   | 35-42cm     | －        | https://funaduri.jp/fish.cgi?fish=saba      |
+| ショウサイフグ     | 長岡丸船(18ﾄﾝ)                         | 茨城 / 鹿島     | 5-23 尾   | 25-43cm     | －        | https://funaduri.jp/fish.cgi?fish=fugu      |
+| ショウサイフグ     | 利喜丸船(13ﾄﾝ)                         | 茨城 / 鹿島     | 1-4 尾    | 30-45cm     | －        | https://funaduri.jp/fish.cgi?fish=fugu      |
+| ショウサイフグ     | 隆正丸船(19ｔ)                          | 外房 / 飯岡     | 2-9 尾    | 25-40cm     | －        | https://funaduri.jp/fish.cgi?fish=fugu      |
+| ショウサイフグ     | 吉久船(19ﾄﾝ)                          | 東京湾奥 / 浦安   | 0-6 尾    | 20-28cm     | －        | https://funaduri.jp/fish.cgi?fish=fugu      |
+| ショウサイフグ     | えさ政釣船店                             | 東京湾奥 / 羽田   | 1-8 尾    | 22-35cm     | －        | https://funaduri.jp/fish.cgi?fish=fugu      |
+| シマアジ        | 爪木丸船(16ﾄﾝ)                         | 南伊豆 / 下田須崎  | X-3 尾    | 0.5-1.4kg   | SANSPO   | https://funaduri.jp/fish.cgi?fish=simaaji   |
+| シロギス        | 宮川丸船(18ﾄﾝ,12ﾄﾝ,4.8ﾄﾝ)              | 内房 / 木更津    | 22 尾     | 13-19cm     | －        | https://funaduri.jp/fish.cgi?fish=kisu      |
+| シロギス        | 守山丸船(16ﾄﾝ)                         | 東京湾奥 / 千葉寒川 | 20-66 尾  | 18-23cm     | －        | https://funaduri.jp/fish.cgi?fish=kisu      |
+| シロギス        | 須原屋船(19ﾄﾝ)                         | 東京湾奥 / 東葛西  | 11-12X 尾 | 1X-2Xcm     | －        | https://funaduri.jp/fish.cgi?fish=kisu      |
+| シロギス        | 中山丸                                | 横浜 / 川崎     | 17-50 尾  | 13-23cm     | －        | https://funaduri.jp/fish.cgi?fish=kisu      |
+| スルメイカ       | はら丸                                | 三浦半島 / 長井   | 3-16 杯   | 20-35cm     | －        | https://funaduri.jp/fish.cgi?fish=surumeika |
+| スルメイカ       | 栃木丸船(16.7ﾄﾝ,7.9ﾄﾝ)                 | 三浦半島 / 長井   | 1X-4X 杯  | 2X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=surumeika |
+| スルメイカ       | なごみ丸                               | 西伊豆 / 松崎    | 2X-4X 杯  | －           | －        | https://funaduri.jp/fish.cgi?fish=surumeika |
+| タイ          | 嘉丸船(14ﾄﾝ)                          | 東伊豆 / 宇佐美   | 1-4 尾    | 1.20-3.00kg | －        | https://funaduri.jp/fish.cgi?fish=tai       |
+| タチウオ        | 吉久船(19ﾄﾝ)                          | 東京湾奥 / 浦安   | 0-4 本    | 65-100cm    | －        | https://funaduri.jp/fish.cgi?fish=tatiuo    |
+| タチウオ        | こうゆう丸船(19ﾄﾝ,16ﾄﾝ)                  | 三浦半島 / 新安浦  | 0-3 本    | 65-111cm    | －        | https://funaduri.jp/fish.cgi?fish=tatiuo    |
+| タチウオ        | 五郎丸船(13ﾄﾝ,13ﾄﾝ)                    | 三浦半島 / 鴨居   | 0-2 本    | 65-90cm     | －        | https://funaduri.jp/fish.cgi?fish=tatiuo    |
+| タチウオ        | 石川丸                                | 三浦半島 / 鴨居   | 0-1 本    | 75-75cm     | －        | https://funaduri.jp/fish.cgi?fish=tatiuo    |
+| トラフグ        | 不動丸船(19ﾄﾝ)                         | 茨城 / 鹿島     | 1 尾      | 5.30kg      | －        | https://funaduri.jp/fish.cgi?fish=torafugu  |
+| トラフグ        | 利喜丸船(13ﾄﾝ)                         | 茨城 / 鹿島     | 1 尾      | 3kg         | －        | https://funaduri.jp/fish.cgi?fish=torafugu  |
+| ハナダイ        | 宗和丸船(14ﾄﾝ,4.9ﾄﾝ)                   | 茨城 / 鹿島新    | 1-6 尾    | 0.4-0.8kg   | －        | https://funaduri.jp/fish.cgi?fish=hanadai   |
+| ハナダイ        | 幸栄丸船(20ﾄﾝ)                         | 茨城 / 鹿島     | 0-13 尾   | 25-35cm     | －        | https://funaduri.jp/fish.cgi?fish=hanadai   |
+| ハナダイ        | 龍鳳丸船(13ﾄﾝ)                         | 外房 / 飯岡     | 10-40 尾  | 15-30cm     | －        | https://funaduri.jp/fish.cgi?fish=hanadai   |
+| ハナダイ        | 安菜丸船(3.4ｔ)                         | 東伊豆 / 網代    | 1-1 尾    | 0.4-0.8kg   | －        | https://funaduri.jp/fish.cgi?fish=hanadai   |
+| ヒラメ         | 志平丸船(16ﾄﾝ,13ﾄﾝ)                    | 三浦半島 / 佐島   | X-2 枚    | 0.8-1.7kg   | 海釣り情報    | https://funaduri.jp/fish.cgi?fish=hirame    |
+| ヒラメ         | 庄治郎丸船(19ｔ)                         | 相模湾 / 平塚    | X-2 枚    | 1-1.1kg     | －        | https://funaduri.jp/fish.cgi?fish=hirame    |
+| ヒラメ         | 庄三郎丸                               | 相模湾 / 平塚    | 0-3 枚    | 1.0-2.9kg   | －        | https://funaduri.jp/fish.cgi?fish=hirame    |
+| ヒラメ         | 嘉丸船(14ﾄﾝ)                          | 東伊豆 / 宇佐美   | 1 枚      | 1.8kg       | －        | https://funaduri.jp/fish.cgi?fish=hirame    |
+| ホウボウ        | 健清丸船(8.5ﾄﾝ)                        | 茨城 / 大洗     | 0-3 尾    | 35-41cm     | －        | https://funaduri.jp/fish.cgi?fish=houbou    |
+| ホウボウ        | 宗和丸船(14ﾄﾝ,4.9ﾄﾝ)                   | 茨城 / 鹿島新    | 0-5 尾    | 25-40cm     | －        | https://funaduri.jp/fish.cgi?fish=houbou    |
+| ホウボウ        | 利喜丸船(13ﾄﾝ)                         | 茨城 / 鹿島     | 1-3 尾    | 30-50cm     | －        | https://funaduri.jp/fish.cgi?fish=houbou    |
+| マゾイ         | ことぶき丸船(5ﾄﾝ)                        | 北茨城 / 会瀬    | 0-2 尾    | 28-32cm     | －        | https://funaduri.jp/fish.cgi?fish=mazoi     |
+| マダイ         | 弁天丸船(11ｔ)                          | 北茨城 / 会瀬    | 3-8 尾    | 0.30-1.50kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | ことぶき丸船(5ﾄﾝ)                        | 北茨城 / 会瀬    | 0-3 尾    | 0.30-0.80kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 大貫丸船(18ﾄﾝ,5ﾄﾝ)                     | 北茨城 / 久慈    | 0-6 尾    | 0.30-2.20kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 日正丸船(17ﾄﾝ,16ﾄﾝ)                    | 北茨城 / 久慈    | 0-7 尾    | 0.3-1kg     | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 釣友丸                                | 北茨城 / 久慈    | 2-10 尾   | 0.3-2.7kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 昭栄丸船(19ﾄﾝ)                         | 茨城 / 大洗     | 0-5 尾    | 0.3-2.2kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 宗和丸船(14ﾄﾝ,4.9ﾄﾝ)                   | 茨城 / 鹿島新    | 0-6 尾    | 0.40-0.90kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 第五悌栄丸船(4.9ﾄﾝ)                      | 茨城 / 鹿島新    | X-9 尾    | 0.5X-2.4Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 長岡丸船(18ﾄﾝ)                         | 茨城 / 鹿島     | 0-2 尾    | 0.90-2.86kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 幸栄丸船(20ﾄﾝ)                         | 茨城 / 鹿島     | 0-13 尾   | 0.60-4.60kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 不動丸船(19ﾄﾝ)                         | 茨城 / 鹿島     | X-4 尾    | 0.5X-2.5Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 利喜丸船(13ﾄﾝ)                         | 茨城 / 鹿島     | 0-2 尾    | 0.50-1.00kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 幸丸船(19ﾄﾝ,19ﾄﾝ,19ﾄﾝ,19ﾄﾝ,19ﾄﾝ,19ﾄﾝ) | 外房 / 飯岡     | 0-18 尾   | 0.3-0.8kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 梅花丸船(19ﾄﾝ,17ﾄﾝ)                    | 外房 / 飯岡     | 0-10 尾   | 0.30-1.20kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 優光丸船(16ﾄﾝ)                         | 外房 / 飯岡     | 0-11 尾   | 0.4-1.8kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 三次郎丸船(18ﾄﾝ)                        | 外房 / 飯岡     | 1-5 尾    | 0.30-1.00kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 作栄丸船(5ﾄﾝ)                          | 外房 / 勝浦大沢   | 4-13 尾   | 0.60-2.00kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 鯛丸船(18ﾄﾝ)                          | 南房 / 天津小湊   | X-7 尾    | 0.6X-2.3Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 利八丸船(19ﾄﾝ)                         | 内房 / 勝山     | 0-4 尾    | 0.80-3.20kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | ムツ六釣船店船(22m, 21.5m)                | 三浦半島 / 久里浜  | X-2 尾    | 0.7-2.9Xkg  | ぎょさん     | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 喜平治丸                               | 三浦半島 / 剣崎間口 | X-1 尾    | 0.6-1.8kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 孫武丸船(9.7ﾄﾝ)                        | 三浦半島 / 剣崎間口 | 0-1 尾    | 0.60-2.50kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 丸又丸船(4.9ﾄﾝ)                        | 三浦半島 / 剣崎間口 | X-9 尾    | 0.4-2kg     | SANSPO   | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 大松丸船(19.9ﾄﾝ,19.9ﾄﾝ)                | 三浦半島 / 剣崎松輪 | 0-6 尾    | 0.80-4.00kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | あまさけや丸船(13ﾄﾝ)                      | 三浦半島 / 剣崎松輪 | 0-4 尾    | 0.80-1.80kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 伝五郎丸船(17ﾄﾝ)                        | 三浦半島 / 剣崎松輪 | X-4 尾    | 0.8X-2.1Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 成銀丸船(19.9ﾄﾝ,19ﾄﾝ)                  | 三浦半島 / 剣崎松輪 | X-2 尾    | 0.5X-1.8Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 浅吉丸船(4.9ﾄﾝ)                        | 三浦半島 / 剣崎松輪 | X-2 尾    | 1.0X-1.0Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 正海丸船(19ｔ)                          | 三浦半島 / 剣崎松輪 | X-3 尾    | 0.8X-5.0Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | つね丸船(19ﾄﾝ,9.9ﾄﾝ,9.7ﾄﾝ)             | 三浦半島 / 佐島   | X-1 尾    | 0.5-3.4kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | ゆうせい丸船(13.8ﾄﾝ)                     | 相模湾 / 湘南片瀬  | 0-1 尾    | 0.5-0.8kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | ちがさき丸船(17ﾄﾝ)                       | 相模湾 / 茅ヶ崎   | 0-1 尾    | 0.4-0.5kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 庄治郎丸船(19ｔ)                         | 相模湾 / 平塚    | 1 尾      | 1kg         | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 国敏丸                                | 相模湾 / 真鶴    | 1-1 尾    | 0.8-1.2kg   | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 鈴喜丸船(9.3ﾄﾝ)                        | 東伊豆 / 網代    | X-5 尾    | 0.5X-1.7Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 安菜丸船(3.4ｔ)                         | 東伊豆 / 網代    | 1 尾      | 1.2kg       | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 爪木丸船(16ﾄﾝ)                         | 南伊豆 / 下田須崎  | X-1 尾    | 0.6-1kg     | SANSPO   | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 魚磯丸船(16ﾄﾝ)                         | 駿河湾 / 久料    | 0-3 尾    | 0.70-2.20kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 第十五祥運丸船(13ﾄﾝ)                      | 駿河湾 / 沼津静浦  | 1 尾      | 1.5-7.5kg   | 入れ食い     | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 山大丸船(3.5ﾄﾝ)                        | 駿河湾 / 清水    | 1-5 尾    | 0.50-1.10kg | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダイ         | 増福丸船(7.9ﾄﾝ)                        | 駿河湾 / 御前崎   | X-2 尾    | 4X-5Xcm     | －        | https://funaduri.jp/fish.cgi?fish=madai     |
+| マダコ         | つれたか丸                              | 茨城 / 那珂湊    | 0-5 杯    | 1.00-2.00kg | －        | https://funaduri.jp/fish.cgi?fish=madako    |
+| マダコ         | ゆうせい丸船(13.8ﾄﾝ)                     | 相模湾 / 湘南片瀬  | 0-4 杯    | 0.2-3.7kg   | －        | https://funaduri.jp/fish.cgi?fish=madako    |
+| マトウダイ       | 岩伊丸船(3.6ﾄﾝ)                        | 三浦半島 / 金田   | 1 尾      | 38cm        | －        | https://funaduri.jp/fish.cgi?fish=matoudai  |
+| マハタ         | 信照丸船(18.5x3.7m)                    | 外房 / 勝浦松部   | 0-4 尾    | 0.6-2.17kg  | －        | https://funaduri.jp/fish.cgi?fish=mahata    |
+| マハタ         | 美吉丸船(4.7ﾄﾝ)                        | 南房 / 洲崎     | 0-2 尾    | 1.00-3.50kg | －        | https://funaduri.jp/fish.cgi?fish=mahata    |
+| マルイカ        | 寿々木丸船(9.7ﾄﾝ)                       | 南房 / 天津小湊   | 3-4X 杯   | 1X-4Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=maruika   |
+| マルイカ        | 宝生丸船(11ﾄﾝ)                         | 内房 / 勝山     | 5-2X 杯   | 1X-2Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=maruika   |
+| マルイカ        | 山天丸船(19ﾄﾝ)                         | 三浦半島 / 久比里  | 2-3X 杯   | 1X-2Xcm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
+| マルイカ        | 喜平治丸                               | 三浦半島 / 剣崎間口 | 0-4X 杯   | 1X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
+| マルイカ        | 佐円丸船(18.9ﾄﾝ)                       | 三浦半島 / 三崎   | 1X-2X 杯  | 1X-3Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=maruika   |
+| マルイカ        | 大和丸船(14ﾄﾝ)                         | 三浦半島 / 小網代  | 3-2X 杯   | 1X-2Xcm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
+| マルイカ        | 翔太丸船(13.5ﾄﾝ)                       | 三浦半島 / 小網代  | 1X-3X 杯  | 1X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
+| マルイカ        | 丸伊丸船(8.5ﾄﾝ)                        | 三浦半島 / 長井荒崎 | 1 杯      | 20cm        | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
+| マルイカ        | はら丸                                | 三浦半島 / 長井   | 3-24 杯   | 14-32cm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
+| マルイカ        | 春盛丸船(14ﾄﾝ)                         | 三浦半島 / 長井漆山 | 5-32 杯   | 15-35cm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
+| マルイカ        | 光三丸船(13ﾄﾝ)                         | 三浦半島 / 長井漆山 | 1X-4X 杯  | 1X-3Xcm     | 釣割       | https://funaduri.jp/fish.cgi?fish=maruika   |
+| マルイカ        | まごうの丸船(17ﾄﾝ)                       | 相模湾 / 茅ヶ崎   | 1-31 杯   | 15-26cm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
+| マルイカ        | 庄治郎丸船(19ｔ)                         | 相模湾 / 平塚    | 11-30 杯  | 20-26cm     | －        | https://funaduri.jp/fish.cgi?fish=maruika   |
+| ムギイカ        | 坂口丸船(19ﾄﾝ,13ﾄﾝ,11ﾄﾝ)               | 相模湾 / 小田原   | 2-3X 杯   | 1X-2Xcm     | SANSPO   | https://funaduri.jp/fish.cgi?fish=mugiika   |
+| ムギイカ        | 平安丸                                | 相模湾 / 小田原   | 10-29 杯  | 18-25cm     | －        | https://funaduri.jp/fish.cgi?fish=mugiika   |
+| ムギイカ        | よしひさ丸                              | 相模湾 / 福浦    | 1-24 杯   | 12-30cm     | －        | https://funaduri.jp/fish.cgi?fish=mugiika   |
+| ムギイカ        | 勘栄丸                                | 駿河湾 / 沼津静浦  | 9-45 杯   | 20-35cm     | －        | https://funaduri.jp/fish.cgi?fish=mugiika   |
+| ムラソイ        | 大貫丸船(18ﾄﾝ,5ﾄﾝ)                     | 北茨城 / 久慈    | X-2 尾    | 3X-3Xcm     | －        | https://funaduri.jp/fish.cgi?fish=murasoi   |
+| メダイ         | えいあん丸船(18ﾄﾝ,14.5ﾄﾝ)                | 三浦半島 / 三崎   | X-1 尾    | 3kg         | SANSPO   | https://funaduri.jp/fish.cgi?fish=medai     |
+| メダイ         | 庄三郎丸                               | 相模湾 / 平塚    | 0-1 尾    | 1.5-1.8kg   | －        | https://funaduri.jp/fish.cgi?fish=medai     |
+| メダイ         | 久寿丸船(13ﾄﾝ)                         | 南伊豆 / 下田須崎  | 7-25 尾   | 1.80-4.50kg | －        | https://funaduri.jp/fish.cgi?fish=medai     |
+| メバル         | ことぶき丸船(5ﾄﾝ)                        | 北茨城 / 会瀬    | 0-1 尾    | 28-30cm     | －        | https://funaduri.jp/fish.cgi?fish=mebaru    |
+| メバル         | 幸栄丸船(20ﾄﾝ)                         | 茨城 / 鹿島     | 13-32 尾  | 25-35cm     | －        | https://funaduri.jp/fish.cgi?fish=mebaru    |
+| ヤリイカ        | 不動丸船(14ﾄﾝ)                         | 外房 / 川津     | 16-34 杯  | 28-45cm     | －        | https://funaduri.jp/fish.cgi?fish=yariika   |
+| ヤリイカ        | 甚四郎丸船(12ﾄﾝ)                        | 南房 / 白間津    | 3-26 杯   | 30-50cm     | －        | https://funaduri.jp/fish.cgi?fish=yariika   |
+| ワラサ         | 幸栄丸船(20ﾄﾝ)                         | 茨城 / 鹿島     | 0-2 尾    | 4.50-5.00kg | －        | https://funaduri.jp/fish.cgi?fish=warasa    |
+| ワラサ         | 不動丸船(19ﾄﾝ)                         | 茨城 / 鹿島     | 2-1X 尾   | 2.4X-5.3Xkg | 釣割       | https://funaduri.jp/fish.cgi?fish=warasa    |
+| イカ          | 藤吉丸                                | 東伊豆 / 宇佐美   | 20-30 杯  | 25-50cm     | －        | https://funaduri.jp/fish.cgi?fish=ika       |
 
 </details>
 
